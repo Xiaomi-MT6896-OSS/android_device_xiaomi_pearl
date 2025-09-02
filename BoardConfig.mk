@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/xiaomi/pearl
 
+# DEBUG
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # DEXPREOPT
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 

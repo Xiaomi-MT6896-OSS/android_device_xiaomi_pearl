@@ -116,10 +116,3 @@ prebuilt_etc {
     src: "fstab.zram",
     vendor: true,
 }
-
-prebuilt_etc {
-    name: "permissive.sh",
-    src: "permissive.sh",
-    sub_dir: "init/hw",
-    vendor: true,
-}

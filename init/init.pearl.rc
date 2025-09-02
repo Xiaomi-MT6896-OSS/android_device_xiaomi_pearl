@@ -1,12 +1,5 @@
 on early-init
-    start set_permissive
-
-service set_permissive /vendor/etc/init/hw/permissive.sh
-    class main
-    user root
-    seclabel u:r:su:s0
-    disabled
-    oneshot
+    write /sys/fs/selinux/enforce 0
 
 service mtk-secure-element-hal-service /vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
     override
