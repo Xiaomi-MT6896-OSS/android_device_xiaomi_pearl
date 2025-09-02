@@ -164,7 +164,8 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/hw/vendor.xiaomi.sensor.citsensorservice@1.1-impl.so'):blob_fixup()
         .add_needed('libui_shim.so'),
 
-    ('vendor/lib/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so',
+    ('vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service',
+     'vendor/lib/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so',
      'vendor/lib64/mt6895/libmtkcam_stdutils.so',
      'vendor/lib64/hw/mt6895/android.hardware.camera.provider@2.6-impl-mediatek.so',
      'vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so'): blob_fixup()
