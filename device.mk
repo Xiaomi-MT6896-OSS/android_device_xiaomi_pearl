@@ -167,7 +167,16 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 # Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_PACKAGES += \
+    FrameworksResOverlayMT6895 \
+    SettingsProviderOverlayMT6895 \
+    SystemUIResOverlayMT6895 \
+    WifiResOverlayMT6895
+
+PRODUCT_PACKAGES += \
+    LineageApertureOverlayMT6895 \
+    LineageDialerOverlayMT6895 \
+    LineageSDKOverlayMT6895
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
