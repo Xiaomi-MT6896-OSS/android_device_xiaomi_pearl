@@ -290,13 +290,6 @@ PRODUCT_COPY_FILES += \
 # Speed profile services and wifi-service to reduce RAM and storage.
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.mediatek
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
 # USB
 $(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
 PRODUCT_PACKAGES += \
