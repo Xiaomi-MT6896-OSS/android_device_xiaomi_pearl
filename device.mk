@@ -139,8 +139,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health-service.mediatek \
+    android.hardware.health-service.mediatek-recovery
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -157,6 +157,14 @@ PRODUCT_PACKAGES += \
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl
+
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
+
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -261,6 +269,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservice \
     vndservicemanager
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-subhal-impl-1.0 \
+    android.hardware.sensors-service.xiaomi-multihal
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
