@@ -125,8 +125,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/mt6895/libmnl.so': blob_fixup()
         .add_needed('libcutils.so'),
 
-    ('vendor/bin/hw/android.hardware.media.c2@1.2-mediatek'
+    ('vendor/bin/hw/android.hardware.media.c2@1.2-mediatek',
      'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b'): blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so')
         .add_needed('libprocessgroup.so')
         .add_needed('libprocessgroup_shim.so')
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
@@ -182,6 +183,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/sensors/hals.conf': blob_fixup()
         .regex_replace('android.hardware.sensors@2.X-subhal-mediatek.so', 'android.hardware.sensors@2.0-subhal-impl-1.0.so'),
 
+    'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so')
+        .replace_needed('libalsautils.so', 'libalsautilsv2.so'),
 
 }  # fmt: skip
 

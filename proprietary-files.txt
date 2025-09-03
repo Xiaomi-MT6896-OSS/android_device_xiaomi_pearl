@@ -1046,6 +1046,7 @@ vendor/lib64/libhevce_sb.ca7.android.so
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
+vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/lib/libcodec2_mtk_c2store.so
 vendor/lib/libcodec2_mtk_vdec.so
 vendor/lib/libcodec2_mtk_venc.so
@@ -1737,7 +1738,6 @@ vendor/etc/vintf/manifest/AHBF@2.1-service.xml
 vendor/etc/vintf/manifest/fod.xml
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
-vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@1.1-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.sensor.communicate@1.0_manifest.xml
 vendor/etc/1-SN1X0_SPC.txt
