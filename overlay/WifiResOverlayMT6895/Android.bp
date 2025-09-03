@@ -7,5 +7,5 @@
 runtime_resource_overlay {
     name: "WifiResOverlayMT6895",
     resource_dirs: ["res"],
-    device_specific: true,
+    vendor: true,
 }

@@ -1,11 +1,11 @@
 //
-// Copyright (C) 2022 The LineageOS Project
+// Copyright (C) 2023 The LineageOS Project
 //
 // SPDX-License-Identifier: Apache-2.0
 //
 
 runtime_resource_overlay {
-    name: "SystemUIResOverlayMT6895",
+    name: "FrameworksResOverlayPearl",
     resource_dirs: ["res"],
     device_specific: true,
 }

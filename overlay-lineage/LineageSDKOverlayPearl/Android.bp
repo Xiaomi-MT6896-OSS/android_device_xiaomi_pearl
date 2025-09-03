@@ -5,7 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "SettingsProviderOverlayMT6895",
+    name: "LineageSDKOverlayPearl",
     resource_dirs: ["res"],
-    device_specific: true,
+    product_specific: true,
 }

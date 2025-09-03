@@ -5,7 +5,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.aperture.overlay.mt6895">
+    package="org.lineageos.aperture.mt6895">
     
     <overlay
         android:isStatic="true"

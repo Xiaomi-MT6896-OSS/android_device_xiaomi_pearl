@@ -5,7 +5,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="lineageos.platform.mt6895">
+    package="lineageos.platform.overlay.pearl">
 
     <overlay
         android:isStatic="true"

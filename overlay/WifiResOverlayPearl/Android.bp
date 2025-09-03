@@ -5,6 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageApertureOverlayMT6895",
-    product_specific: true,
+    name: "WifiResOverlayPearl",
+    resource_dirs: ["res"],
+    device_specific: true,
 }

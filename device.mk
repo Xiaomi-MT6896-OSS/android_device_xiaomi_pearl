@@ -167,14 +167,30 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    FrameworksResOverlayPearl \
+    NfcOverlayPearl \
+    SettingsProviderOverlayPearl \
+    SystemUIResOverlayPearl \
+    WifiResOverlayPearl
+
+PRODUCT_PACKAGES += \
+    LineageApertureOverlayPearl \
+    LineageDialerOverlayPearl \
+    LineageSDKOverlayPearl
+
+# Common Overlays
+PRODUCT_PACKAGES += \
     FrameworksResOverlayMT6895 \
-    SettingsProviderOverlayMT6895 \
-    SystemUIResOverlayMT6895 \
+    PowerOffAlarmOverlayMT6895 \
+    SettingsOverlayMT6895 \
+    SettingsProviderResOverlayMT6895 \
+    SystemUIOverlayMT6895 \
     WifiResOverlayMT6895
 
 PRODUCT_PACKAGES += \
     LineageApertureOverlayMT6895 \
-    LineageDialerOverlayMT6895 \
+    LineageSettingsOverlayMT6895 \
+    LineageDialerMT6895 \
     LineageSDKOverlayMT6895
 
 # Partitions
@@ -258,6 +274,10 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.se.omapi.uicc.xml \
         frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/com.android.nfc_extras.xml \
         frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/com.nxp.mifare.xml
+
+# Power-off Alarm
+PRODUCT_PACKAGES += \
+    PowerOffAlarm
 
 # Modules
 PRODUCT_PACKAGES += \

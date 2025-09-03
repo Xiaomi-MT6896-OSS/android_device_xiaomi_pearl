@@ -5,6 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageApertureOverlayMT6895",
-    product_specific: true,
+    name: "SystemUIOverlayMT6895",
+    resource_dirs: ["res"],
+    vendor: true,
 }

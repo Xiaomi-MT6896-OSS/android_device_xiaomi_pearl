@@ -6,6 +6,5 @@
 
 runtime_resource_overlay {
     name: "LineageSDKOverlayMT6895",
-    resource_dirs: ["res"],
     product_specific: true,
 }

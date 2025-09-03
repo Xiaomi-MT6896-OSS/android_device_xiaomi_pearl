@@ -5,7 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "LineageDialerOverlayMT6895",
+    name: "LineageApertureOverlayPearl",
     resource_dirs: ["res"],
     product_specific: true,
 }
