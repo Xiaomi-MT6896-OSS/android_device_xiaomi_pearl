@@ -1,9 +1,6 @@
 # Displayfeature
 vendor.xiaomi.hardware.displayfeature::IDisplayFeature       u:object_r:vendor_hal_displayfeature_xiaomi_hwservice:s0
 
-# Vibratorfeature
-#vendor.xiaomi.hardware.vibratorfeature::IVibratorFeature       u:object_r:hal_vibratorfeature_hwservice:s0
-
 # Fingerprint
 vendor.xiaomi.hardware.fx.tunnel::IMiFxTunnel                                        u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon              u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
@@ -15,6 +12,7 @@ com.fingerprints.extension::IFingerprintSensorTest                              
 com.fingerprints.extension::IFingerprintCalibration                                  u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 com.fingerprints.extension::IFingerprintOptical                                      u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 com.fingerprints.extension::IFingerprintSenseTouch                                   u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
+vendor.xiaomi.hardware.dtool::IDtool                                             u:object_r:vendor_hal_fingerprint_hwservice_xiaomi:s0
 
 # Fido
 vendor.xiaomi.hardware.mfidoca::IFidoService                                  u:object_r:hal_mfidoca_hwservice:s0
