@@ -1,6 +1,3 @@
-on early-init
-    write /sys/fs/selinux/enforce 0
-
 service mtk-secure-element-hal-service /vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
     override
     class hal
