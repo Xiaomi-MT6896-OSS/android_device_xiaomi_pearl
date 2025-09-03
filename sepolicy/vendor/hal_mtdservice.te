@@ -1,5 +1,6 @@
 type hal_mtdservice_hwservice, hwservice_manager_type;
 type hal_mtdservice_default, domain;
+
 hal_server_domain(hal_mtdservice_default, hal_mtdservice);
 
 type hal_mtdservice_default_exec, exec_type, vendor_file_type, file_type;
@@ -13,7 +14,6 @@ hal_client_domain(hal_mtdservice_default, hal_allocator)
 binder_call(hal_mtdservice_client, hal_mtdservice_server)
 binder_call(hal_mtdservice_default, servicemanager)
 
-add_hwservice(hal_mtdservice_server, hal_mtdservice_hwservice)
 allow hal_mtdservice_client hal_mtdservice_hwservice:hwservice_manager find;
 
 allow hal_mtdservice_default tee_device:chr_file rw_file_perms;
