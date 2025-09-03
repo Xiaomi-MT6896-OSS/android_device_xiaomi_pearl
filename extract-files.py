@@ -174,6 +174,15 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/mtkfusionrild': blob_fixup()
         .add_needed('libutils-v32.so'),
 
+    ('vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so',
+     'vendor/lib64/mt6895/libaalservice.so',
+     'vendor/bin/mnld'): blob_fixup()
+        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
+
+    'vendor/etc/sensors/hals.conf': blob_fixup()
+        .regex_replace('android.hardware.sensors@2.X-subhal-mediatek.so', 'android.hardware.sensors@2.0-subhal-impl-1.0.so'),
+
+
 }  # fmt: skip
 
 module = ExtractUtilsModule(
