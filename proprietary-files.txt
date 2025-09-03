@@ -1415,8 +1415,6 @@ vendor/lib64/se_nq_extn_client-v1.so
 
 # Sensors
 vendor/firmware/remoteproc_scp
-vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
-vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
 vendor/lib/hw/sensors.dynamic_sensor_hal.so
 vendor/lib/hw/sensors.elliptic@2.0.so
 vendor/lib/hw/sensors.mius.proximity.so
