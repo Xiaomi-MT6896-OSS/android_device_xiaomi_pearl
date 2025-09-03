@@ -171,23 +171,17 @@ PRODUCT_PACKAGES += \
     NfcOverlayPearl \
     SettingsProviderOverlayPearl \
     SystemUIResOverlayPearl \
-    WifiResOverlayPearl
-
-PRODUCT_PACKAGES += \
-    LineageApertureOverlayPearl \
-    LineageDialerOverlayPearl \
-    LineageSDKOverlayPearl
-
-# Common Overlays
-PRODUCT_PACKAGES += \
+    WifiResOverlayPearl \
     FrameworksResOverlayMT6895 \
-    PowerOffAlarmOverlayMT6895 \
     SettingsOverlayMT6895 \
     SettingsProviderResOverlayMT6895 \
     SystemUIOverlayMT6895 \
     WifiResOverlayMT6895
 
 PRODUCT_PACKAGES += \
+    LineageApertureOverlayPearl \
+    LineageDialerOverlayPearl \
+    LineageSDKOverlayPearl \
     LineageApertureOverlayMT6895 \
     LineageSettingsOverlayMT6895 \
     LineageDialerMT6895 \
