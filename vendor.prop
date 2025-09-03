@@ -150,6 +150,10 @@ vendor.displayfeature.entry.enable=true
 # DRM
 ro.netflix.bsp_rev=MTK6895-35027-1
 
+# Fingerprint
+persist.vendor.fingerprint.type=side
+persist.vendor.fingerprint.sensor_location=1080|960|200
+
 # FM Radio
 ro.vendor.fm.platform=connac2x
 
