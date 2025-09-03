@@ -154,6 +154,9 @@ PRODUCT_PACKAGES += \
     libcppbor_external.vendor \
     libkeymint.vendor
 
+# IMS
+$(call inherit-product, vendor/mediatek/ims/ims.mk)
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
