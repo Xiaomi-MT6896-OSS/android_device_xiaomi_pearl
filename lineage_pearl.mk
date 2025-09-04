@@ -29,6 +29,10 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # ROM Flags
 WITH_GMS := false
 
+# Enable DM file pre-opting to reduce first boot time
+# Note that this may significantly increase your compilation time!
+PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint="xiaomi/pearl/pearl:15/AP3A.240905.015.A2/OS2.0.205.0.VLHCNXM:user/release-keys"
 
