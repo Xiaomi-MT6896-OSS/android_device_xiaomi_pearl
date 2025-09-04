@@ -748,11 +748,8 @@ vendor/etc/cust_color.xml
 # Display
 vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
-vendor/bin/displayfeature
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
-vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
-vendor/etc/vintf/manifest/vendor.xiaomi.hardware.displayfeature@1.0-service.xml
 vendor/lib/egl/mt6895/libGLES_mali.so;SYMLINK=vendor/lib/egl/libGLES_mali.so
 vendor/lib/egl/egl.cfg
 vendor/lib/egl/libGLES_meow.so
@@ -765,9 +762,7 @@ vendor/lib/hw/mt6895/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLI
 vendor/lib/hw/mt6895/gralloc.common.so;SYMLINK=vendor/lib/hw/gralloc.common.so
 vendor/lib/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib/hw/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib/hw/mt6895/vulkan.mali.so;SYMLINK=vendor/lib/hw/vulkan.mali.so
-vendor/lib/hw/displayfeature.default.so
 vendor/lib/hw/gralloc.default.so
-vendor/lib/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib/mt6895/arm.graphics-V1-ndk_platform.so;SYMLINK=vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/mt6895/libaalservice.so;SYMLINK=vendor/lib/libaalservice.so
 vendor/lib/mt6895/libpqparamparser.so;SYMLINK=vendor/lib/libpqparamparser.so
@@ -816,10 +811,6 @@ vendor/lib/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib/vendor.mediatek.hardware.pq@2.9.so
-vendor/lib/libdisplayfeature.so
-vendor/lib/libdisplayfeatureservice.so
-vendor/lib64/libdisplayfeature.so
-vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/egl/mt6895/libGLES_mali.so;SYMLINK=vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
@@ -831,10 +822,8 @@ vendor/lib64/hw/mt6895/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYM
 vendor/lib64/hw/mt6895/gralloc.common.so;SYMLINK=vendor/lib64/hw/gralloc.common.so
 vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib64/hw/mt6895/vulkan.mali.so;SYMLINK=vendor/lib64/hw/vulkan.mali.so
-vendor/lib64/hw/displayfeature.default.so
 vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
-vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so
 vendor/lib64/mt6895/arm.graphics-V1-ndk_platform.so;SYMLINK=vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/mt6895/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
 vendor/lib64/mt6895/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so

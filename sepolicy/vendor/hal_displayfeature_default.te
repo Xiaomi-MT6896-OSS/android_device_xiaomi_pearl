@@ -47,5 +47,3 @@ allow vendor_hal_displayfeature_xiaomi_default fwk_sensor_hwservice:hwservice_ma
 get_prop(vendor_displayfeature, vendor_displayfeature_prop)
 get_prop(vendor_displayfeature, vendor_mtk_pq_prop)
 set_prop(vendor_hal_displayfeature_xiaomi_default, vendor_displayfeature_prop)
-
-
