@@ -79,6 +79,9 @@ vendor.mtk.camera.app.fd.video=1
 # ConsumerIR
 ro.hardware.consumerir=common
 
+# Developer Options
+ro.oem_unlock_supported=1
+
 # Display
 debug.mediatek.appgamepq_compress=1
 debug.mediatek.disp_decompress=1
@@ -149,7 +152,6 @@ ro.vendor.fm.platform=connac2x
 
 # Fingerprint
 persist.vendor.fingerprint.type=side
-persist.vendor.fingerprint.sensor_location=1080|960|200
 
 # GNSS
 ro.vendor.gps.chrdev=gps_drv_dl_v050
