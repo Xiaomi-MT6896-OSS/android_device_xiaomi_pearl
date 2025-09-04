@@ -76,6 +76,7 @@ TARGET_SCREEN_DENSITY := 440
 # Kernel
 TARGET_FORCE_PREBUILT_KERNEL := true
 KERNEL_PREBUILTS_DIR := device/xiaomi/pearl-kernel
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6895
 
 TARGET_NO_KERNEL_OVERRIDE := true
 
