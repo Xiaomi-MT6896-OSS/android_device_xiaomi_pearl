@@ -748,6 +748,7 @@ vendor/etc/cust_color.xml
 # Display
 vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt6895;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
+vendor/bin/displayfeature
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc
@@ -815,6 +816,10 @@ vendor/lib/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib/vendor.mediatek.hardware.pq@2.9.so
+vendor/lib/libdisplayfeature.so
+vendor/lib/libdisplayfeatureservice.so
+vendor/lib64/libdisplayfeature.so
+vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/egl/mt6895/libGLES_mali.so;SYMLINK=vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
@@ -1613,7 +1618,6 @@ vendor/bin/dc_cal
 vendor/bin/dconfig
 vendor/bin/ddr_eye
 vendor/bin/dexecutor
-vendor/bin/displayfeature
 vendor/bin/dmc_core
 vendor/bin/doeapp-memtester
 vendor/bin/doeapp-sat
@@ -1869,8 +1873,6 @@ vendor/lib/libcom.xiaomi.metadatautils.so
 vendor/lib/libcom.xiaomi.pluginutils.so
 vendor/lib/libcvsd_mtk.so
 vendor/lib/libdecrypt.so
-vendor/lib/libdisplayfeature.so
-vendor/lib/libdisplayfeatureservice.so
 vendor/lib/libdre.so
 vendor/lib/libdynamiclog.so
 vendor/lib/libfgauge_gm30.so
@@ -2032,8 +2034,6 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libdarkTestJpeg.so
 vendor/lib64/libdarkTest_dll.so
 vendor/lib64/libdecrypt.so
-vendor/lib64/libdisplayfeature.so
-vendor/lib64/libdisplayfeatureservice.so
 vendor/lib64/libdre.so
 vendor/lib64/libdynamiclog.so
 vendor/lib64/libfft_vendor.so
