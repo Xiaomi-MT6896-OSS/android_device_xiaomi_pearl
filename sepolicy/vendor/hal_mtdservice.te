@@ -19,6 +19,7 @@ binder_call(hal_mtdservice_default, servicemanager)
 hal_client_domain(hal_mtdservice_default, hal_keymint)
 
 allow hal_mtdservice_client hal_mtdservice_hwservice:hwservice_manager find;
+allow hal_mtdservice_default hal_mtdservice_hwservice:hwservice_manager find;
 
 allow hal_mtdservice_default tee_device:chr_file rw_file_perms;
 allow hal_mtdservice_default ion_device:chr_file r_file_perms;
