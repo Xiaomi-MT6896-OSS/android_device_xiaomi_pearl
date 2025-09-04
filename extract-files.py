@@ -63,9 +63,6 @@ blob_fixups: blob_fixups_user_type = {
 	'vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service': blob_fixup()
     .replace_needed('android.hardware.power-V2-ndk_platform.so','android.hardware.power-V2-ndk.so'),
 
-	'vendor/bin/hw/vendor.xiaomi.hardware.vibratorfeature.service': blob_fixup()
-    .replace_needed('android.hardware.vibrator-V1-ndk_platform.so','android.hardware.vibrator-V1-ndk.so'),
-
     ('vendor/lib64/mt6895/libcam.hal3a.so',
      'vendor/lib64/mt6895/libcam.hal3a.ctrl.so',
      'vendor/lib64/mt6895/libmtkcam_request_requlator.so'): blob_fixup()

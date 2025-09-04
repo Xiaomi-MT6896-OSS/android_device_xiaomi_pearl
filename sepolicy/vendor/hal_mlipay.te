@@ -6,6 +6,8 @@ hal_server_domain(hal_mlipay_default, hal_mlipay)
 type hal_mlipay_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(hal_mlipay_default)
 
+binder_use(hal_mlipay_default)
+
 hal_client_domain(hal_mlipay_default, hal_teei_capi)
 hal_client_domain(hal_mlipay_default, hal_allocator)
 
