@@ -74,62 +74,6 @@ on post-fs-data
     chown root system /sys/devices/platform/112b0000.ufshci/ufscld/trigger_interval
     chmod 664 /sys/devices/platform/112b0000.ufshci/ufscld/trigger
 
-on init
-    # Refer to http://source.android.com/devices/tech/storage/index.html
-    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through
-    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
-    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
-    #           Developers expect data stored in these locations to be available over long periods of time."
-    # Therefore, if the target doesn't support sd hot-plugging (Ex: the SD card slot in a battery compartment), we need to export SECONDARY_STORAGE in 'boot' section
-    #
-    # export SECONDARY_STORAGE /storage/sdcard1
-
-service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
-    class late_start
-    disabled
-
-service vendor_tcpdump /vendor/bin/tcpdump-vendor -i any -W 3 -C 5 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap
-       class main
-       user root
-       group root wifi
-       disabled
-       oneshot
-
-service vendor_sniffer /vendor/bin/tcpdump-vendor -i wlan0 -w /data/vendor/wlan_logs/sniffer.pcap
-    class main
-    user root
-    group root wifi
-    disabled
-    oneshot
-
-service vendor_sniffer_circular /vendor/bin/tcpdump-vendor -i wlan0 -W 3 -C 300 -w /data/vendor/wlan_logs/sniffer.pcap
-    class main
-    user root
-    group root wifi
-    disabled
-    oneshot
-
-on property:vendor.hardware.wlan.runsniffer=stop
-    stop vendor_sniffer
-
-on property:vendor.hardware.wlan.runsniffer=start
-    start vendor_sniffer
-
-on property:vendor.hardware.wlan.runtcpdump=stop
-    stop vendor_tcpdump
-
-on property:vendor.hardware.wlan.runtcpdump=start
-    start vendor_tcpdump
-
-on property:sys.user.0.ce_available=true
-    start vendor_tcpdump
-
-on property:vendor.hardware.wlan.runsniffer.circular=stop
-     stop vendor_sniffer_circular
-
-on property:vendor.hardware.wlan.runsniffer.circular=start
-     start vendor_sniffer_circular
-
 # displayfeature
 on boot
     #Display feature sysfs node
