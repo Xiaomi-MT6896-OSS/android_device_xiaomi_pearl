@@ -357,7 +357,5 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek/libmtkperf_client
 
-
-
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/pearl/pearl-vendor.mk)

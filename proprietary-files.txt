@@ -1161,7 +1161,6 @@ vendor/lib64/se_nq_extn_client-v1.so
 
 # Sensors
 vendor/firmware/remoteproc_scp
-vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/sensors.elliptic@2.0.so
 vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6895.so
 vendor/lib64/hw/sensors.mius.proximity.so
@@ -1169,7 +1168,6 @@ vendor/lib64/libhidparser.so
 vendor/lib64/libksensor.so
 vendor/lib64/libnotifyaudiohal.so;FIX_SONAME
 vendor/lib64/libultrasound.so
-vendor/lib64/sensors.touch.detect.so
 
 # Sensors configs
 vendor/etc/sensors/hals.conf
