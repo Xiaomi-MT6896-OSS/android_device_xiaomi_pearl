@@ -1177,6 +1177,7 @@ vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Thermal (Xiaomi)
 vendor/bin/mi_thermald
+vendor/lib64/hw/thermal_hal.so
 
 # Thermal configs
 vendor/etc/thermal/disable_skin_control.conf
@@ -1341,7 +1342,6 @@ vendor/bin/rttv_v2
 vendor/bin/runDarkTestAPI
 vendor/bin/runDarkTestJpegAPI
 vendor/bin/setup_fct
-vendor/bin/slad
 vendor/bin/smartcharging
 vendor/bin/smartpa_nvtest
 vendor/bin/stp_dump3
@@ -1384,7 +1384,6 @@ vendor/etc/init/mtk_pkm_service.rc
 vendor/etc/init/mtklog.rc
 vendor/etc/init/muxreport.rc
 vendor/etc/init/networksetting.rc
-vendor/etc/init/slad.rc
 vendor/etc/init/smartcharging_init.rc
 vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.dtool@1.0-service.rc
@@ -1408,9 +1407,7 @@ vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
 vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/seccomp_policy/mediaswcodec.policy
-vendor/etc/sla/slad.conf
 vendor/etc/vintf/manifest/AHBF@2.1-service.xml
-vendor/etc/vintf/manifest/fod.xml
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.sensor.citsensorservice@1.1-service.xml
@@ -1476,7 +1473,6 @@ vendor/firmware/mali_csffw.bin
 vendor/firmware/mali_csffw_reload.bin
 vendor/firmware/mono.cnt
 vendor/lib64/hw/audio_policy.stub.so
-vendor/lib64/hw/thermal_hal.so
 vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib64/hw/vendor.xiaomi.sensor.citsensorservice@1.1-impl.so
 vendor/lib64/mt6895/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
