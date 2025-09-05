@@ -243,4 +243,9 @@
         <transport>hwbinder</transport>
         <fqname>@1.2::ITidaService/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.soterservice</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::ISoter/default</fqname>
+    </hal>
 </manifest>

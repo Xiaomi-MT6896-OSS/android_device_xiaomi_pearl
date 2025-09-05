@@ -24,6 +24,10 @@ allow hal_soterservice_default mitee_client_device:chr_file rw_file_perms;
 allow hal_soterservice_default mitee_sfs_file:dir create_dir_perms;
 allow hal_soterservice_default mitee_sfs_file:file create_file_perms;
 
+# Allow mtdservice to read/write Widevine keybox
+allow hal_soterservice_default mnt_vendor_file:dir search;
+rw_dir_file(hal_soterservice_default, persist_data_file)
+
 get_prop(hal_soterservice_default, vendor_mlipay_prop);
 set_prop(hal_soterservice_default, vendor_mlipay_prop);
 
