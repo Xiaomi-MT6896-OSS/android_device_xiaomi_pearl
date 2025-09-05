@@ -781,11 +781,6 @@ vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
 
-# Dumpstate
-vendor/bin/hw/android.hardware.dumpstate@1.1-service.xiaomi
-vendor/etc/init/android.hardware.dumpstate@1.1-service.xiaomi.rc
-vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.xiaomi.xml
-
 # Fido
 vendor/bin/fidoca_mitee
 vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-miteeservice.rc
