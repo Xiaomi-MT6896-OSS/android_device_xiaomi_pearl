@@ -159,9 +159,6 @@
 # Mitee
 /data/vendor/mitee(/.*)? u:object_r:mitee_data_file:s0
 /mnt/vendor/persist/data(/.*)? u:object_r:mitee_sfs_file:s0
-/dev/tee0 u:object_r:mitee_client_device:s0
-/dev/teepriv0 u:object_r:mitee_client_device:s0
-/dev/ufs-bsg0 u:object_r:mitee_client_device:s0
 
 # Mfidoca
 /vendor/bin/fidoca_mitee u:object_r:hal_mfidoca_default_exec:s0
