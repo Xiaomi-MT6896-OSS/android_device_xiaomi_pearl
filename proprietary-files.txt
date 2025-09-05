@@ -1063,7 +1063,7 @@ vendor/lib64/libpower_timer.so
 
 # Tida
 vendor/bin/tidad_mitee@1.2
-vendor/etc/init/vendor.xiaomi.hardware.tidaservice@1.2-miteeservice.
+vendor/etc/init/vendor.xiaomi.hardware.tidaservice@1.2-miteeservice.rc
 vendor/lib64/libtida_mitee@1.2.so
 vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.1.so
