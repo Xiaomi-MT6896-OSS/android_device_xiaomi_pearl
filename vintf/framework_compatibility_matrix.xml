@@ -1,0 +1,10 @@
+<manifest version="4.0" type="device" target-level="6">
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.soterservice</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISoter</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>
