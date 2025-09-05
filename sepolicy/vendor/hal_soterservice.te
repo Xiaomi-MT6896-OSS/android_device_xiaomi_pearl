@@ -1,9 +1,13 @@
+type hal_soterservice_hwservice, hwservice_manager_type;
 type hal_soterservice_default, domain;
 type hal_soterservice_default_exec, exec_type, vendor_file_type, file_type;
-type hal_soterservice_hwservice, hwservice_manager_type;
 
-init_daemon_domain(hal_soterservice_default)
 hal_server_domain(hal_soterservice_default, hal_soterservice)
+init_daemon_domain(hal_soterservice_default)
+
+binder_use(hal_soterservice_default)
+
+hal_client_domain(hal_soterservice_default, hal_teei_capi)
 
 # Allow hwbinder call from hal client to server
 binder_call(hal_soterservice_client, hal_soterservice_server)
@@ -20,8 +24,7 @@ allow hal_soterservice_default mitee_client_device:chr_file rw_file_perms;
 allow hal_soterservice_default mitee_sfs_file:dir create_dir_perms;
 allow hal_soterservice_default mitee_sfs_file:file create_file_perms;
 
-allow hal_soterservice_default mnt_vendor_file:dir search;
-rw_dir_file(hal_soterservice_default, persist_data_file)
+get_prop(hal_soterservice_default, vendor_mlipay_prop);
+set_prop(hal_soterservice_default, vendor_mlipay_prop);
 
-get_prop(hal_soterservice_default, vendor_fingerprint_prop)
-get_prop(hal_soterservice_default, hwservicemanager_prop)
+get_prop(hal_soterservice_default, vendor_fingerprint_prop);

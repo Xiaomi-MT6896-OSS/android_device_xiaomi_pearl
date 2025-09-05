@@ -153,16 +153,23 @@
 # Graphics
 /dev/mi_display/disp_feature u:object_r:vendor_displayfeature_device:s0
 
+# Keymint
+/(vendor|system\/vendor)/bin/hw/android\.hardware\.security\.keymint@1\.0-service\.mitee  u:object_r:hal_keymint_default_exec:s0
+
+# Mitee
+/data/vendor/mitee(/.*)? u:object_r:mitee_data_file:s0
+/mnt/vendor/persist/data(/.*)? u:object_r:mitee_sfs_file:s0
+/dev/tee0 u:object_r:mitee_client_device:s0
+/dev/teepriv0 u:object_r:mitee_client_device:s0
+/dev/ufs-bsg0 u:object_r:mitee_client_device:s0
+
 # Mfidoca
-/vendor/bin/fidoca_isee u:object_r:hal_mfidoca_default_exec:s0
 /vendor/bin/fidoca_mitee u:object_r:hal_mfidoca_default_exec:s0
 
 # Mlipay
-/vendor/bin/mlipayd_isee@1\.1 u:object_r:hal_mlipay_default_exec:s0
 /vendor/bin/mlipayd_mitee@1\.1 u:object_r:hal_mlipay_default_exec:s0
 
 # Mtdservice
-/vendor/bin/mtd_isee@1\.3 u:object_r:hal_mtdservice_default_exec:s0
 /vendor/bin/mtd_mitee@1\.3 u:object_r:hal_mtdservice_default_exec:s0
 
 # NFC
@@ -172,11 +179,14 @@
 # Power
 /dev/xiaomi-touch u:object_r:vendor_touchfeature_device:s0
 
+# Secure element
+/vendor/bin/hw/vendor.xiaomi.hardware.secure_element@1.2-service u:object_r:hal_secure_element_default_exec:s0
+
 # Sensors
 /vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal u:object_r:hal_sensors_default_exec:s0
 
-# Secure element
-/vendor/bin/hw/vendor.xiaomi.hardware.secure_element@1.2-service u:object_r:hal_secure_element_default_exec:s0
+# Soter
+/vendor/bin/soterd u:object_r:hal_soterservice_default_exec:s0
 
 # Tee
 /dev/0:0:0:49476 u:object_r:teei_rpmb_device:s0
@@ -186,10 +196,8 @@
 /dev/teepriv0 u:object_r:mitee_client_device:s0
 /dev/ufs-bsg0 u:object_r:mitee_client_device:s0
 
-# Mitee
-/data/vendor/mitee(/.*)? u:object_r:mitee_data_file:s0
-/mnt/vendor/persist/data(/.*)? u:object_r:mitee_sfs_file:s0
-/(vendor|system\/vendor)/bin/hw/android\.hardware\.security\.keymint@1\.0-service\.mitee  u:object_r:hal_keymint_default_exec:s0
+# Tidaservice
+/vendor/bin/tidad_mitee@1\.2 u:object_r:hal_tidaservice_default_exec:s0
 
 # Thermal
 /vendor/bin/mi_thermald u:object_r:vendor_mi_thermald_exec:s0
