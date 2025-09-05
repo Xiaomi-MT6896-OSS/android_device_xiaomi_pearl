@@ -1009,7 +1009,7 @@ vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
 
 # NFC (Firmware)
-vendor/lib/libsn100u_fw.so
+vendor/lib64/libsn100u_fw.so
 
 # NFC configs
 vendor/etc/libnfc-nci.conf
@@ -1620,7 +1620,6 @@ vendor/lib64/libsensor_cal.so
 vendor/lib64/libsimlock.so
 vendor/lib64/libsimmelock.so
 vendor/lib64/libsmartcharging.so
-vendor/lib64/libsn100u_fw.so
 vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/libssccalapi.so
