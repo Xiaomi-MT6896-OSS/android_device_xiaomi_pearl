@@ -46,7 +46,7 @@ blob_fixups: blob_fixups_user_type = {
 
 	'vendor/bin/factory': blob_fixup()
     .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
-	
+
 	('vendor/bin/hw/android.hardware.gnss-service.mediatek',
 	'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'): blob_fixup()
     .replace_needed('android.hardware.gnss-V1-ndk_platform.so','android.hardware.gnss-V1-ndk.so'),
@@ -90,27 +90,18 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
 
-    ('vendor/lib/libnvram.so',
-     'vendor/lib/libsysenv.so',
-     'vendor/lib/nfc_nci.nqx.default.hw.v1.so',
-     'vendor/lib64/libnvram.so',
+    ('vendor/lib64/libnvram.so',
      'vendor/lib64/libsysenv.so',
-     'vendor/lib/nfc_nci.nqx.default.hw.v1.so',
      'vendor/bin/ioprofiler'): blob_fixup()
         .add_needed('libbase_shim.so'),
 
-    ('vendor/lib/libvcodec_oal.so',
-     'vendor/lib/libthha.so',
-     'vendor/lib/libmp4enc_xa.ca7.so',
-     'vendor/lib/libvp9dec_sa.ca7.so',
-     'vendor/lib64/libvcodec_oal.so',
+    ('vendor/lib64/libvcodec_oal.so',
      'vendor/lib64/libthha.so'): blob_fixup()
         .clear_symbol_version('__aeabi_memcpy')
         .clear_symbol_version('__aeabi_memset')
         .clear_symbol_version('__gnu_Unwind_Find_exidx'),
 
-    ('vendor/lib/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so',
-     'vendor/lib64/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so'): blob_fixup()
+     'vendor/lib64/mt6895/libneuralnetworks_sl_driver_mtk_prebuilt.so': blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_createFromHandle')
@@ -130,41 +121,10 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libprocessgroup_shim.so')
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
 
-    'vendor/lib/libh264enc_sa.ca7.so': blob_fixup()
-        .clear_symbol_version('__aeabi_memclr')
-        .clear_symbol_version('__aeabi_memclr4')
-        .clear_symbol_version('__aeabi_memcpy')
-        .clear_symbol_version('__aeabi_memcpy4')
-        .clear_symbol_version('__aeabi_memset')
-        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
-
-    'vendor/lib/libmp4enc_sa.ca7.so': blob_fixup()
-        .clear_symbol_version('__aeabi_memclr')
-        .clear_symbol_version('__aeabi_memcpy')
-        .clear_symbol_version('__aeabi_memset')
-        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
-
-    'vendor/lib/libvc1dec_sa.ca7.so': blob_fixup()
-        .clear_symbol_version('__aeabi_memclr')
-        .clear_symbol_version('__aeabi_memclr4')
-        .clear_symbol_version('__aeabi_memcpy')
-        .clear_symbol_version('__aeabi_memmove')
-        .clear_symbol_version('__aeabi_memset')
-        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
-
-    'vendor/lib/libvp8dec_sa.ca7.so': blob_fixup()
-        .clear_symbol_version('__aeabi_memcpy')
-        .clear_symbol_version('__aeabi_memcpy4')
-        .clear_symbol_version('__aeabi_memmove')
-        .clear_symbol_version('__aeabi_memset')
-        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
-
-    ('vendor/lib/hw/vendor.xiaomi.sensor.citsensorservice@1.1-impl.so',
-     'vendor/lib64/hw/vendor.xiaomi.sensor.citsensorservice@1.1-impl.so'):blob_fixup()
+     'vendor/lib64/hw/vendor.xiaomi.sensor.citsensorservice@1.1-impl.so':blob_fixup()
         .add_needed('libui_shim.so'),
 
     ('vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service',
-     'vendor/lib/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so',
      'vendor/lib64/mt6895/libmtkcam_stdutils.so',
      'vendor/lib64/hw/mt6895/android.hardware.camera.provider@2.6-impl-mediatek.so',
      'vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so'): blob_fixup()
