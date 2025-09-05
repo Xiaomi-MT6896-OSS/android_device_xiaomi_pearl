@@ -159,11 +159,9 @@ vendor/etc/misound_res_spk.bin
 # Audio Hardware
 vendor/lib64/libmisound.so
 vendor/lib64/libmisoundcrossfade.so
-vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6895.so
 vendor/lib64/hw/audio.r_submix.default.so
 vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6895.so
-vendor/lib64/hw/audio.usb.default.so
 
 # Audio Firmware
 vendor/firmware/tfa98xx.cnt
@@ -720,30 +718,16 @@ vendor/lib64/mt6895/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
 vendor/lib64/mt6895/libpqpconfig.so;SYMLINK=vendor/lib64/libpqpconfig.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
-vendor/lib64/libMiDispDevManager.so
 vendor/lib64/libNoFpsActor.so
 vendor/lib64/libaal_mtk.so
-vendor/lib64/libcolortempmode.so
 vendor/lib64/libcomposer_ext.so
-vendor/lib64/libdither.so
-vendor/lib64/libeyecare.so
-vendor/lib64/libflatmode.so
 vendor/lib64/libgpu_aux.so
 vendor/lib64/libgpud.so
 vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
-vendor/lib64/libmiBrightness.so
-vendor/lib64/libmiSensorCtrl.so
-vendor/lib64/libmiXmlParser.so
-vendor/lib64/libmi_dspp.so
 vendor/lib64/libmml.so
-vendor/lib64/libpaperMode.so
 vendor/lib64/libpqframework.so
-vendor/lib64/libsdr2hdr.so
 vendor/lib64/libsensorndkbridge.so
-vendor/lib64/libsre.so
-vendor/lib64/libtruetone.so
-vendor/lib64/libvideomode.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
@@ -1290,7 +1274,6 @@ vendor/firmware/soc7_0_ram_wmmcu_1b_t_1_hdr.bin
 vendor/firmware/soc7_0_ram_wmmcu_1c_1_hdr.bin
 
 # Miscellaneous
-odm/lib64/libhdrmode.so
 vendor/bin/hw/vendor.mediatek.hardware.nwk_opt@1.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.secure_element@1.2-service
@@ -1381,7 +1364,6 @@ vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
 vendor/etc/init/camerahalserver.rc
 vendor/etc/init/ddr_training.rc
-vendor/etc/init/display.rc
 vendor/etc/init/dmc_core.rc
 vendor/etc/init/eara-io-service.rc
 vendor/etc/init/ffu.rc
@@ -1452,7 +1434,6 @@ vendor/etc/capture_headset_left.sh
 vendor/etc/capture_headset_right.sh
 vendor/etc/default_pd_calibration.bin
 vendor/etc/device_sar_config.xml
-vendor/etc/df_default.xml
 vendor/etc/dsi_l16s_36_02_0a_dsc_vdo_mi.xml
 vendor/etc/elliptic_sensor.xml
 vendor/etc/excluded-input-devices.xml
