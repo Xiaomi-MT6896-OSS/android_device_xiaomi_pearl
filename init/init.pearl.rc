@@ -12,17 +12,14 @@ service vendor.secure-element /vendor/bin/hw/vendor.xiaomi.hardware.secure_eleme
     group nfc secure_element
     disabled
 
-service vendor.keymint-mitee /vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     override
     class early_hal
-    interface android.hardware.keymaster@4.0::IKeymasterDevice default
-    interface android.hardware.keymaster@4.1::IKeymasterDevice default
-    user system
-    group system drmrpc
-    seclabel u:r:hal_keymint_default:s0
+    user nfc
+    group nfc drmrpc system
     disabled
 
 on boot
-    enable vendor.keymint-mitee
     enable mtk-secure-element-hal-service
     enable vendor.secure-element
+    enable vendor.nfc_hal_service

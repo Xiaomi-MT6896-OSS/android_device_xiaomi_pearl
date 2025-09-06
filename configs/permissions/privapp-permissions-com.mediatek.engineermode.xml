@@ -12,6 +12,4 @@
         <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
         <permission name="android.permission.LOCATION_HARDWARE"/>
     </privapp-permissions>
-
-
 </permissions>
