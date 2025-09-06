@@ -32,6 +32,13 @@ vendor/lib64/libfvaudio.so
 vendor/lib64/libmiresample.so
 vendor/lib64/libmispowerop.so
 vendor/lib64/libmsbc_mtk.so
+vendor/lib64/libmtklimiter_vendor.so
+vendor/lib64/libmtkshifter_vendor.so
+vendor/lib64/libnxp_extamp_intf.so
+vendor/lib64/libnxpsmartpaparser.so
+vendor/lib64/librt_extamp_intf.so
+vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
+vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/libvoiprec.so
 vendor/lib64/libxlog.so
 vendor/lib64/libvow_ap_test_aa.so
@@ -749,6 +756,8 @@ vendor/bin/hw/mt6895/android.hardware.graphics.allocator@4.0-service-mediatek.mt
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
+vendor/firmware/mali_csffw.bin
+vendor/firmware/mali_csffw_reload.bin
 vendor/lib/egl/egl.cfg
 vendor/lib64/egl/mt6895/libGLES_mali.so;SYMLINK=vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_meow.so
@@ -776,6 +785,7 @@ vendor/lib64/libai_pq.so
 vendor/lib64/libai_sdr2hdr.so
 vendor/lib64/libai_sdr2hdr_auth.so
 vendor/lib64/libaispq.so
+vendor/lib64/libappgamepq.so
 vendor/lib64/libcomposer_ext.so
 vendor/lib64/libhdrvideo.so
 vendor/lib64/libgpu_aux.so
@@ -1080,9 +1090,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.nvram@1.1-impl.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
-# Payment (IFAA)
-product/app/IFAAService/IFAAService.apk
-
 # Power
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
@@ -1105,7 +1112,6 @@ vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.2.so
 vendor/bin/hw/mtkfusionrild
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
-vendor/etc/init/init.cccifsd.rc
 vendor/etc/init/init.cccimdinit.rc
 vendor/etc/init/init.cccirpcd.rc
 vendor/etc/init/mtkrild.rc
@@ -1125,6 +1131,13 @@ vendor/etc/virtual-spn-conf-by-efgid1.xml
 vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
+vendor/lib64/libcares_naptr.so
+vendor/lib64/libcarrierconfig.so
+vendor/lib64/libccci_util.so
+vendor/lib64/libgwsdv2-ril.so
+vendor/lib64/libgwsdv3-ril.so
+vendor/lib64/libmipc.so
+vendor/lib64/libmnetlink_v104.so
 vendor/lib64/libmtkconfig.so
 vendor/lib64/libmtkconfigutils.so
 vendor/lib64/libmtkcutils.so
@@ -1133,34 +1146,20 @@ vendor/lib64/libmtkproperty.so
 vendor/lib64/libmtkrillog.so
 vendor/lib64/libmtkrilutils.so
 vendor/lib64/libmtkutils.so
-vendor/lib64/libratconfig.so
-vendor/lib64/librilfusion.so
-vendor/lib64/libstorage_otp.so
-vendor/lib64/libsysenv.so
-vendor/lib64/libcares_naptr.so
-vendor/lib64/libcarrierconfig.so
-vendor/lib64/libccci_util.so
-vendor/lib64/libgwsdv2-ril.so
-vendor/lib64/libgwsdv3-ril.so
-vendor/lib64/libmipc.so
-vendor/lib64/libmnetlink_v104.so
 vendor/lib64/libmtk-fusion-ril-prop-vsim.so
 vendor/lib64/libmtk-ril.so
 vendor/lib64/libmtk_bsg.so
 vendor/lib64/libmtkares.so
-vendor/lib64/libmtklimiter_vendor.so
 vendor/lib64/libmtkmipc-ril.so
 vendor/lib64/libmtknetcap.so
 vendor/lib64/libmtknetutils.so
-vendor/lib64/libmtkshifter_vendor.so
 vendor/lib64/libmtkspparser.so
 vendor/lib64/libmtksysutils.so
 vendor/lib64/libmtktinyxml.so
-vendor/lib64/libnxp_extamp_intf.so
-vendor/lib64/libnxpsmartpaparser.so
-vendor/lib64/librt_extamp_intf.so
-vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
-vendor/lib64/libspeechparser_vendor.so
+vendor/lib64/libratconfig.so
+vendor/lib64/librilfusion.so
+vendor/lib64/libstorage_otp.so
+vendor/lib64/libsysenv.so
 vendor/lib64/libtrm.so
 vendor/lib64/libvia-ril.so
 vendor/lib64/libviamipc-ril.so
@@ -1185,9 +1184,6 @@ vendor/bin/hw/vtservice_hidl
 vendor/etc/init/init.vtservice_hidl.rc
 vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
-
-# RenderScript
-vendor/lib64/hw/android.hardware.renderscript@1.0-impl.so
 
 # Secure element
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
@@ -1217,8 +1213,6 @@ vendor/etc/sensors/lightSensorCali.json
 vendor/etc/sensors/lightSensorConfig.json
 
 # Soter
-product/app/SoterService/SoterService.apk
-vendor/bin/SoterProvisioningTool_mitee
 vendor/bin/soterd
 vendor/etc/init/vendor.xiaomi.hardware.soterservice@1.0-service.rc
 vendor/lib64/libsoter.so
@@ -1239,10 +1233,6 @@ vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Thermal (Xiaomi)
 vendor/bin/mi_thermald
-vendor/bin/thermal_core
-vendor/bin/thermal_intf
-vendor/etc/init/init.thermal_core.rc
-vendor/etc/thermalbreakboostconfig.xml
 vendor/lib64/hw/thermal_hal.so
 
 # Thermal configs
@@ -1342,33 +1332,4 @@ vendor/firmware/soc7_0_ram_wmmcu_1b_t_1_hdr.bin
 vendor/firmware/soc7_0_ram_wmmcu_1c_1_hdr.bin
 
 # Miscellaneous
-vendor/etc/1-SN1X0_SPC.txt
-vendor/etc/audio_em.xml
-vendor/etc/audio_policy.conf
-vendor/etc/breakwhiteapplist.xml
-vendor/etc/default_pd_calibration.bin
-vendor/etc/device_sar_config.xml
-vendor/etc/excluded-input-devices.xml
-vendor/etc/fstb.cfg
-vendor/etc/meow.cfg
-vendor/etc/mono.cnt
-vendor/etc/mtk_omx_core.cfg
-vendor/etc/mtk_vext_info
-vendor/etc/nhw
-vendor/etc/power_app_cfg.xml
-vendor/etc/powercontable.xml
-vendor/etc/powerscntbl.xml
-vendor/etc/screen_light.xml
-vendor/etc/sensor_diag.cfg
-vendor/etc/smsdbvisitor.xml
-vendor/etc/task_profiles.json
-vendor/etc/usb_audio_accessory_only_policy_configuration.xml
-vendor/etc/wfd_source_capability.csv
-vendor/etc/xgf.cfg
-vendor/firmware/mali_csffw.bin
-vendor/firmware/mali_csffw_reload.bin
-vendor/firmware/mono.cnt
-vendor/lib64/libappgamepq.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
-vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
