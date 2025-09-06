@@ -825,11 +825,6 @@ vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
-# Fpsgo
-vendor/bin/fpsgo
-vendor/etc/init/fpsgo.rc
-vendor/etc/init/init.fpsgo.rc
-
 # Fido
 vendor/bin/fidoca_mitee
 vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-miteeservice.rc
