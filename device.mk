@@ -77,20 +77,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MtkInCallService
 
-PRODUCT_PACKAGES += \
-    libaudiopreprocessing \
-    libbundlewrapper \
-    libdownmix \
-    libdynproc \
-    libeffectproxy \
-    libhapticgenerator \
-    libldnhncr \
-    libreverbwrapper \
-    libvisualizer
-
-PRODUCT_PACKAGES += \
-    MtkInCallService
-
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
@@ -116,7 +102,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.3-service \
+    android.hardware.graphics.composer@2.4-service \
     android.hardware.memtrack-service.mediatek-mali
 
 # DRM
@@ -149,18 +135,6 @@ PRODUCT_PACKAGES += \
 # IMS
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    libkeymaster_messages.vendor \
-    libkeymaster_portable.vendor
-
-# Keymint
-PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-V4-ndk.vendor \
-    lib_android_keymaster_keymint_utils.vendor \
-    libcppbor_external.vendor \
-    libkeymint.vendor
-
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
@@ -178,7 +152,29 @@ $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-    # Media
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc-service.nxp \
+    com.android.nfc_extras \
+    Tag
+
+PRODUCT_COPY_FILES += \
+        frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.ese.xml \
+        frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.hce.xml \
+        frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.hcef.xml \
+        frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.uicc.xml \
+        frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.xml \
+        frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.se.omapi.ese.xml \
+        frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.se.omapi.uicc.xml \
+        frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/com.android.nfc_extras.xml \
+        frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/com.nxp.mifare.xml
+
+# Modules
+PRODUCT_PACKAGES += \
+    init.insmod.sh \
+    init.insmod.mt6895.cfg
+
+# Media
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -276,33 +272,6 @@ $(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libp
 # Properties
 include $(LOCAL_PATH)/vendor_logtag.mk
 
-# NFC
-PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.nxp \
-    com.android.nfc_extras \
-    Tag
-
-PRODUCT_COPY_FILES += \
-        frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.ese.xml \
-        frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.hce.xml \
-        frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.hcef.xml \
-        frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.uicc.xml \
-        frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.xml \
-        frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.se.omapi.ese.xml \
-        frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.se.omapi.uicc.xml \
-        frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/com.android.nfc_extras.xml \
-        frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/com.nxp.mifare.xml
-
-# Modules
-PRODUCT_PACKAGES += \
-    init.insmod.sh \
-    init.insmod.mt6895.cfg
-
-# Media
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
-
 # Radio
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/rsc,$(TARGET_COPY_OUT_VENDOR)/etc/rsc)
@@ -335,14 +304,13 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # USB
 $(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
-    android.hardware.usb@1.3.vendor \
-    android.hardware.usb.gadget@1.1.vendor
+    android.hardware.usb.gadget-service.mediatek
 
 # Vndservice
 PRODUCT_PACKAGES += \
-    vndservice \
     vndservicemanager
 
 # Sensors
