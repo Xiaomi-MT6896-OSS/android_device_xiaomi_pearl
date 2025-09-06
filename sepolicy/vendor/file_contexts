@@ -172,6 +172,7 @@
 /dev/xiaomi-touch u:object_r:vendor_touchfeature_device:s0
 
 # Secure element
+/(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service-mediatek u:object_r:mtk_hal_secure_element_exec:s0
 /vendor/bin/hw/vendor.xiaomi.hardware.secure_element@1.2-service u:object_r:hal_secure_element_default_exec:s0
 
 # Sensors
