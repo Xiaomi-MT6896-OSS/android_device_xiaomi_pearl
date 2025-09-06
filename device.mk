@@ -281,7 +281,6 @@ PRODUCT_PACKAGES += \
     fstab.mt6895 \
     fstab.mt6895.vendor_ramdisk \
     fstab.zram \
-    init.aee.rc \
     init.batterysecret.rc \
     init.connectivity.rc \
     init.fingerprint.rc \

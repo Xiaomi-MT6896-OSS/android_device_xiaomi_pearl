@@ -9,11 +9,13 @@ import /vendor/etc/init/hw/init.mi_thermald.rc
 import /vendor/etc/init/hw/init.sensor_2_0.rc
 import /vendor/etc/init/hw/init.project.rc
 import /vendor/etc/init/hw/init.fingerprint.rc
-import /vendor/etc/init/hw/init.pearl.rc
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import /vendor/etc/init/hw/init.modem.rc
 # *** DO NOT import the new rc file after this line ***
+
+on early-init
+    write /sys/module/drm/parameters/vblankoffdelay -1
 
 on init
 # change lk_env permission
@@ -27,9 +29,9 @@ on init
 # mount different fs start
 
 on charger
-    # Configure default brightness and switch to backlight trigger.
+    # Configure default brightness and switch to drm backlight trigger.
     write /sys/class/leds/lcd-backlight/brightness 1000
-    write /sys/class/leds/lcd-backlight/trigger "backlight"
+    write /sys/class/leds/lcd-backlight/trigger "backlight-drm"
 
 on fs
     wait_for_prop hwservicemanager.ready "true"
@@ -37,7 +39,6 @@ on fs
 
     # mount fstab
     mount_all --early
-    exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/by-name/userdata
 
     #haptic Start
     mkdir /mnt/vendor/persist/haptics 0755 system system
@@ -54,9 +55,6 @@ on late-fs
     mount_all --late
 
 on post-fs
-    # Support legacy paths
-    symlink /sdcard /storage/sdcard0
-
     #change permissions for mediaserver
     chown root media /proc/clkmgr/mipi_test
 
@@ -94,8 +92,6 @@ on post-fs
 
 on post-fs-data
     wait_for_prop vendor.all.modules.ready 1
-
-    swapon_all /vendor/etc/fstab.enableswap
 
     chown system system /mnt/vendor/nvcfg
     chmod 0771 /mnt/vendor/nvcfg
@@ -143,9 +139,6 @@ on post-fs-data
     mkdir /data/vendor/camera
     chown root system /data/vendor/camera
     chmod 0771 /data/vendor/camera
-    
-    mkdir /data/vendor/camera/offlinelog 0777 cameraserver audio
-    chmod 0666 /dev/camlog
 
     mkdir /data/vendor/camera/offlinelog 0777 cameraserver audio
     chmod 0666 /dev/camlog
@@ -276,23 +269,12 @@ on post-fs-data
     chmod 660 /dev/alarm
     chown root system /dev/alarm
 
-    # M4U
-    #insmod /vendor/lib/modules/m4u.ko
-    #mknod /dev/M4U_device c 188 0
-    chmod 0444 /dev/m4u
-    #chown system media /dev/M4U_device
-    chmod 0640 /proc/m4u
-    chown system media /proc/m4u
-
-    #set mlock limit to infinate (for m4u operation)
-    setrlimit 8 -1 -1
-
     # CMDQ
-    chmod 0644 /dev/mtk_mdp
+    chmod 0640 /dev/mtk_mdp
     chown system system /dev/mtk_mdp
 
     # MDP SYNC
-    chmod 0644 /dev/mdp_sync
+    chmod 0640 /dev/mdp_sync
     chown system system /dev/mdp_sync
 
     # MML PQ
@@ -332,9 +314,9 @@ on post-fs-data
     chmod 0660 /dev/vcu
     chown media system /dev/vcu
     chmod 0660 /dev/video0
-    chown mediacodec system /dev/video0
+    chown media system /dev/video0
     chmod 0660 /dev/video1
-    chown mediacodec system /dev/video1
+    chown media system /dev/video1
     mkdir /data/vendor/vcodec 0777 media system
     mkdir /data/vendor/vcodec/log 0770 media system
     mkdir /data/vendor/vcodec/in 0770 media system
@@ -552,9 +534,6 @@ on post-fs-data
     chown system camera /dev/vpu
     chown system camera /dev/apusys
     chown system camera /dev/mtk_ccd
-    chown system camera /sys/kernel/debug/mtk_cam_dbg/0/ctrl
-    chown system camera /sys/kernel/debug/mtk_cam_dbg/1/ctrl
-    chown system camera /sys/kernel/debug/mtk_cam_dbg/2/ctrl
 
     #CCU
     chmod 0660 /dev/ccu
@@ -656,16 +635,6 @@ on post-fs-data
     chmod 0440 /dev/mcupm
     chown root system /dev/mcupm
 
-    #EM of MT6360
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmu.5-0034/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/data
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmu.5-0034/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/reg_addr
-    chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/reg_addr
-
     #widevine driver node
     chmod 0660 /dev/drm_wv
     chown media system /dev/drm_wv
@@ -685,7 +654,6 @@ on post-fs-data
 
 # End of adding by MTK drivers
 # -----------------------
-
 on boot
     write /proc/sys/vm/dirty_writeback_centisecs 300
     chmod 0660 /sys/power/autosleep
@@ -699,8 +667,6 @@ on boot
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
     chown system system /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-    chown root   system /sys/kernel/debug/binder/transaction_log_enable
-    chown root   system /sys/kernel/debug/binder/perf_evalue
     chown system system /sys/devices/system/cpu/rq-stats/htasks_thresh
     chmod 0660 /sys/devices/system/cpu/rq-stats/htasks_thresh
     chown system system /sys/devices/system/cpu/rq-stats/avg_htasks_thresh
@@ -911,17 +877,6 @@ on property:ro.boot.slot_suffix=_b
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
 
-# FPSGO FBT Game
-on boot
-    insmod /vendor/lib/modules/fpsgo.ko
-
-# MSYNC Game
-on boot
-    insmod /vendor/lib/modules/msync2_dms.ko
-on boot
-    insmod /vendor/lib/modules/msync2_frd.ko
-
-# Audio Override
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
@@ -935,8 +890,3 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     task_profiles ProcessCapacityHigh HighPerformance
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
-
-on property:sys.boot_completed=1
-    # Restrict permissions to socket file
-    # to hide Magisk & co.
-    chmod 440 /proc/net/unix
