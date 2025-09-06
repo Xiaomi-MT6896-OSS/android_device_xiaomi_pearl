@@ -275,6 +275,7 @@ include $(LOCAL_PATH)/vendor_logtag.mk
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
     com.android.nfc_extras \
+    NfcNci \
     Tag
 
 PRODUCT_COPY_FILES += \
