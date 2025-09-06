@@ -139,6 +139,13 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
+# IFAA manager
+PRODUCT_PACKAGES += \
+    IFAAService
+
+# IMS
+$(call inherit-product, vendor/mediatek/ims/ims.mk)
+
 # Keymaster
 PRODUCT_PACKAGES += \
     libkeymaster_messages.vendor \
@@ -150,9 +157,6 @@ PRODUCT_PACKAGES += \
     lib_android_keymaster_keymint_utils.vendor \
     libcppbor_external.vendor \
     libkeymint.vendor
-
-# IMS
-$(call inherit-product, vendor/mediatek/ims/ims.mk)
 
 # Light
 PRODUCT_PACKAGES += \
