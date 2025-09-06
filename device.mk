@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4-service \
+    android.hardware.graphics.composer@2.3-service \
     android.hardware.memtrack-service.mediatek-mali
 
 # DRM
