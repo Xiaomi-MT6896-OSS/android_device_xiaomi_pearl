@@ -29,9 +29,9 @@ on init
 # mount different fs start
 
 on charger
-    # Configure default brightness and switch to drm backlight trigger.
+    # Configure default brightness and switch to backlight trigger.
     write /sys/class/leds/lcd-backlight/brightness 1000
-    write /sys/class/leds/lcd-backlight/trigger "backlight-drm"
+    write /sys/class/leds/lcd-backlight/trigger "backlight"
 
 on fs
     wait_for_prop hwservicemanager.ready "true"
