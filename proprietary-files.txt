@@ -1373,7 +1373,6 @@ vendor/etc/init/fpsgo.rc
 vendor/etc/init/init.fpsgo.rc
 vendor/etc/init/init.thermal_core.rc
 vendor/etc/init/smartcharging_init.rc
-vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/1-SN1X0_SPC.txt
 vendor/etc/MNL_Config.xml
 vendor/etc/audio_em.xml
