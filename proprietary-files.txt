@@ -1,13 +1,6 @@
 # Unpinned blobs from missi-user 15 AP3A.240905.015.A2 OS2.0.205.0.VLHCNXM release-keys
 
 # AEE
-vendor/bin/hw/vendor.mediatek.hardware.aee@1.1-service
-vendor/etc/init/aee_aedv64_v2.rc
-vendor/etc/init/vendor.mediatek.hardware.aee@1.1-service.rc
-vendor/etc/aee-commit
-vendor/etc/aee-config
-vendor/lib64/vendor.mediatek.hardware.aee@1.0.so
-vendor/lib64/vendor.mediatek.hardware.aee@1.1.so
 vendor/lib64/libaedv.so
 
 # Audio
