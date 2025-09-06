@@ -132,7 +132,6 @@
 # Displayfeature
 /data/vendor/display(/.*)? u:object_r:vendor_display_data_file:s0
 /(vendor|system\/vendor)/bin/displayfeature u:object_r:vendor_displayfeature_exec:s0
-/(vendor|system\/vendor)/bin/hw/vendor\.xiaomi\.hardware\.displayfeature@1\.0-service u:object_r:vendor_hal_displayfeature_xiaomi_default_exec:s0
 
 # Ir
 /dev/ir_spi u:object_r:vendor_ir_spi_device:s0
@@ -149,6 +148,9 @@
 /data/vendor/goodix(/.*)? u:object_r:fingerprint_vendor_data_file:s0
 /mnt/vendor/persist/fpc(/.*)? u:object_r:fingerprint_vendor_data_file:s0
 /mnt/vendor/persist/goodix(/.*)? u:object_r:fingerprint_vendor_data_file:s0
+/sys/devices/platform/fingerprint(/.*)? u:object_r:vendor_sysfs_fp:s0
+/dev/goodix_fp u:object_r:fingerprint_device:s0
+/dev/xiaomi-fp u:object_r:fingerprint_device:s0
 
 # Graphics
 /dev/mi_display/disp_feature u:object_r:vendor_displayfeature_device:s0
@@ -186,12 +188,14 @@
 /vendor/bin/soterd u:object_r:hal_soterservice_default_exec:s0
 
 # Tee
-/dev/0:0:0:49476 u:object_r:teei_rpmb_device:s0
 /(vendor|system\/vendor)/bin/tee-supplicant u:object_r:tee_exec:s0
 /(vendor|system\/vendor)/bin/miteelog u:object_r:tee_exec:s0
+/mnt/vendor/persist/data(/.*)? u:object_r:mitee_sfs_file:s0
+/dev/0:0:0:49476 u:object_r:teei_rpmb_device:s0
 /dev/tee0 u:object_r:mitee_client_device:s0
 /dev/teepriv0 u:object_r:mitee_client_device:s0
 /dev/ufs-bsg0 u:object_r:mitee_client_device:s0
+/data/vendor/mitee(/.*)? u:object_r:mitee_data_file:s0
 
 # Tidaservice
 /vendor/bin/tidad_mitee@1\.2 u:object_r:hal_tidaservice_default_exec:s0
