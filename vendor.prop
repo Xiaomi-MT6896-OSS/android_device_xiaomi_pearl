@@ -1,6 +1,3 @@
-# ADB
-persist.adb.nonblocking_ffs=0
-
 # Audio
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
@@ -34,18 +31,24 @@ vendor.usbsph.ul.pcm.dump=0
 bluetooth.device.class_of_device=90,2,12
 bluetooth.profile.a2dp.source.enabled?=true
 bluetooth.profile.avrcp.target.enabled?=true
+bluetooth.profile.bap.broadcast.assist.enabled?=true
+bluetooth.profile.bap.unicast.client.enabled?=true
 bluetooth.profile.bas.client.enabled?=true
+bluetooth.profile.ccp.server.enabled?=true
+bluetooth.profile.csip.set_coordinator.enabled?=true
 bluetooth.profile.gatt.enabled?=true
+bluetooth.profile.hap.client.enabled?=true
 bluetooth.profile.hfp.ag.enabled?=true
 bluetooth.profile.hid.device.enabled?=true
 bluetooth.profile.hid.host.enabled?=true
 bluetooth.profile.map.server.enabled?=true
+bluetooth.profile.mcp.server.enabled?=true
 bluetooth.profile.opp.enabled?=true
 bluetooth.profile.pan.nap.enabled?=true
 bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
-bluetooth.profile.vcp.controller.enabled=true
+bluetooth.profile.vcp.controller.enabled?=true
 ro.vendor.bt.platform=6895
 vendor.bluetooth.ldac.abr=true
 
@@ -76,11 +79,12 @@ vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
 vendor.mtk.camera.app.fd.video=1
 
+# Charging
+persist.vendor.accelerate.charge=true
+ro.vendor.mtk_fast_charging_support=1
+
 # ConsumerIR
 ro.hardware.consumerir=common
-
-# OEM Unlock reporting
-ro.oem_unlock_supported=0
 
 # Display
 debug.mediatek.appgamepq_compress=1
@@ -151,7 +155,6 @@ ro.vendor.mtk_log_hide_gps=1
 
 # Graphics
 ro.opengles.version=196610
-# May fix GPU from https://github.com/phhusson/treble_experimentations/issues/2563
 persist.sys.phh.mtk_ged_kpi=1
 
 # IMS
@@ -240,6 +243,7 @@ ro.vendor.radio.max.multisim=dsds
 ro.vendor.sim_me_lock_mode=3
 telephony.active_modems.max_count=2
 telephony.lteOnCdmaDevice=1
+import /vendor/etc/rsc/${ro.boot.rsc}.prop
 
 # Sensors
 ro.vendor.mtk.sensor.support=yes
