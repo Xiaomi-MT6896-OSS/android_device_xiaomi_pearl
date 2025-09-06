@@ -37,28 +37,12 @@ blob_fixups: blob_fixups_user_type = {
 		.replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so', 'android.hardware.security.secureclock-V1-ndk.so')
 		.add_needed('android.hardware.security.rkp-V3-ndk.so'),
 
-	('vendor/lib64/libmt_mitee@1.3.so',
-	'vendor/lib64/libkeymint_support.so'): blob_fixup()
+	'vendor/lib64/libmt_mitee@1.3.so': blob_fixup()
     .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so','android.hardware.security.keymint-V4-ndk.so'),
-
-	'vendor/lib64/libkeystore-engine-wifi-hidl.so': blob_fixup()
-    .replace_needed('android.system.keystore2-V1-ndk_platform.so','android.system.keystore2-V1-ndk.so'),
-
-	'vendor/bin/factory': blob_fixup()
-    .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
 
 	('vendor/bin/hw/android.hardware.gnss-service.mediatek',
 	'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'): blob_fixup()
     .replace_needed('android.hardware.gnss-V1-ndk_platform.so','android.hardware.gnss-V1-ndk.so'),
-
-	'vendor/bin/hw/android.hardware.lights-service.mediatek': blob_fixup()
-    .replace_needed('android.hardware.light-V1-ndk_platform.so','android.hardware.light-V1-ndk.so'),
-
-	'vendor/bin/hw/android.hardware.memtrack-service.mediatek': blob_fixup()
-    .replace_needed('android.hardware.memtrack-V1-ndk_platform.so','android.hardware.memtrack-V1-ndk.so'),
-
-	'vendor/bin/hw/android.hardware.vibrator-service.mediatek': blob_fixup()
-    .replace_needed('android.hardware.vibrator-V2-ndk_platform.so','android.hardware.vibrator-V2-ndk.so'),
 
 	'vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service': blob_fixup()
     .replace_needed('android.hardware.power-V2-ndk_platform.so','android.hardware.power-V2-ndk.so'),
@@ -95,8 +79,7 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/bin/ioprofiler'): blob_fixup()
         .add_needed('libbase_shim.so'),
 
-    ('vendor/lib64/libvcodec_oal.so',
-     'vendor/lib64/libthha.so'): blob_fixup()
+     'vendor/lib64/libthha.so': blob_fixup()
         .clear_symbol_version('__aeabi_memcpy')
         .clear_symbol_version('__aeabi_memset')
         .clear_symbol_version('__gnu_Unwind_Find_exidx'),
@@ -119,9 +102,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libprocessgroup.so')
         .add_needed('libprocessgroup_shim.so')
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
-
-     'vendor/lib64/hw/vendor.xiaomi.sensor.citsensorservice@1.1-impl.so':blob_fixup()
-        .add_needed('libui_shim.so'),
 
     ('vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service',
      'vendor/lib64/mt6895/libmtkcam_stdutils.so',

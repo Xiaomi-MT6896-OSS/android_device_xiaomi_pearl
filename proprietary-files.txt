@@ -859,8 +859,6 @@ vendor/firmware/soc_fm_v1_coeff.bin
 vendor/firmware/soc_fm_v1_patch.bin
 
 # Gatekeeper
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
-vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 vendor/lib64/hw/gatekeeper.mitee.so
 
 # GNSS
@@ -1374,4 +1372,3 @@ vendor/lib64/libappgamepq.so
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
-vendor/lib64/vendor.xiaomi.sensor.citsensorservice@1.1.so
