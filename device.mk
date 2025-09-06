@@ -174,6 +174,10 @@ $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
 $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 
+# Native libraries whitelist
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResOverlayPearl \
