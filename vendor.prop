@@ -1,54 +1,45 @@
 # Audio
-aaudio.mmap_exclusive_policy=2
-aaudio.mmap_policy=2
 audio.deep_buffer.media=true
-audio.offload.min.duration.secs=30
 audio.offload.video=true
+audio.offload.min.duration.secs=30
+aaudio.mmap_policy=0
+aaudio.mmap_exclusive_policy=0
+ro.audio.monitorRotation=true
+ro.vendor.audio.gain.support=true
+ro.config.media_vol_default=10
+ro.config.vc_call_vol_steps=11
+ro.vendor.audio.soundtrigger.wakeupword=5
+vendor.audio.spkcal.copy.inhal=true
+vendor.audio.usb.super_hifi=true
+vendor.audio.usb.iems.period_us=5000
+vendor.audiohal.telephonytx.type=2
 persist.vendor.audio.misound.disable=true
 persist.vendor.audiohal.aurisys.pcm_dump_on=0
 persist.vendor.audiohal.p2w_dump_on=0
 persist.vendor.audiohal.pcm_mixer_dump_on=0
-ro.config.media_vol_default=10
-ro.config.vc_call_vol_steps=11
-ro.vendor.audio.gain.support=true
-ro.vendor.audio.soundtrigger.wakeupword=5
+vendor.usbsph.dl.pcm.dump=0
+vendor.usbsph.ul.pcm.dump=0
+vendor.usbsph.srcaws.pcm.dump=0
+vendor.streamout.pcm.dump=0
+vendor.streamin.pcm.dump=0
 ro.vendor.audio.us.proximity=true
 ro.vendor.audio.us.proximity_waitfornegative_feature=true
-vendor.audio.powerhal.power.ul=true
-vendor.audio.powerhal.power.dl=true
-vendor.audiohal.miultrasound.enable=true
-vendor.audio.spkcal.copy.inhal=true
-vendor.audio.usb.iems.period_us=5000
-vendor.audio.usb.super_hifi=true
-vendor.audiohal.telephonytx.type=2
-vendor.streamin.pcm.dump=0
-vendor.streamout.pcm.dump=0
-vendor.usbsph.dl.pcm.dump=0
-vendor.usbsph.srcaws.pcm.dump=0
-vendor.usbsph.ul.pcm.dump=0
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
 bluetooth.profile.a2dp.source.enabled?=true
 bluetooth.profile.avrcp.target.enabled?=true
-bluetooth.profile.bap.broadcast.assist.enabled?=true
-bluetooth.profile.bap.unicast.client.enabled?=true
 bluetooth.profile.bas.client.enabled?=true
-bluetooth.profile.ccp.server.enabled?=true
-bluetooth.profile.csip.set_coordinator.enabled?=true
 bluetooth.profile.gatt.enabled?=true
-bluetooth.profile.hap.client.enabled?=true
 bluetooth.profile.hfp.ag.enabled?=true
 bluetooth.profile.hid.device.enabled?=true
 bluetooth.profile.hid.host.enabled?=true
 bluetooth.profile.map.server.enabled?=true
-bluetooth.profile.mcp.server.enabled?=true
 bluetooth.profile.opp.enabled?=true
 bluetooth.profile.pan.nap.enabled?=true
 bluetooth.profile.pan.panu.enabled?=true
 bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
-bluetooth.profile.vcp.controller.enabled?=true
 ro.vendor.bt.platform=6895
 vendor.bluetooth.ldac.abr=true
 
@@ -86,58 +77,53 @@ ro.vendor.mtk_fast_charging_support=1
 # ConsumerIR
 ro.hardware.consumerir=common
 
-# Display
-debug.mediatek.appgamepq_compress=1
-debug.mediatek.disp_decompress=1
-persist.vendor.sys.mtkaal.function=0
-persist.vendor.sys.pq.disp.ccorr.silky.brightness=0
-ro.hardware.egl=meow
-ro.hardware.gralloc=common
-ro.hardware.hwcomposer=mtk_common
+# Displayro.hardware.egl=meow
 ro.hardware.vulkan=mali
-ro.launcher.blur.appLaunch=0
-ro.sf.blurs_are_expensive=0
-ro.surface_flinger.supports_background_blur=0
 ro.vendor.composer_version=2.3
-ro.vendor.mml.mtk_mml_support=1
-ro.vendor.mtk_aal_support=1
 ro.vendor.mtk_aod_support=1
-ro.vendor.mtk_backlight_hwc_support=1
-ro.vendor.mtk_cuva_hdr_support=1
-ro.vendor.mtk_dre30_support=1
-ro.vendor.mtk_hdr_video_support=1
+ro.hardware.hwcomposer=mtk_common
 ro.vendor.mtk_ovl_bringup=0
-ro.vendor.mtk_pq_color_mode=3
+ro.hardware.gralloc=common
 ro.vendor.mtk_pq_support=2
-ro.vendor.pq.mtk_aal_support=1
+ro.vendor.mtk_pq_color_mode=3
+persist.vendor.sys.pq.disp.ccorr.silky.brightness=0
+debug.mediatek.appgamepq_compress=1
+ro.vendor.pq.mtk_pq_video_whitelist_support=0
+ro.vendor.pq.mtk_video_transition=0
+ro.vendor.pq.mtk_scltm_support=1
 ro.vendor.pq.mtk_ai_scence_pq_support=0
+ro.vendor.pq.mtk_hdr10_plus_recording_support=1
 ro.vendor.pq.mtk_ai_sdr_to_hdr_support=1
-ro.vendor.pq.mtk_backlight_smooth_support=0
-ro.vendor.pq.mtk_blulight_def_support=0
+ro.vendor.pq.mtk_ultra_resolution_support=0
+ro.vendor.pq.mtk_dc_support=0
+ro.vendor.pq.mtk_ds_support=1
+ro.vendor.pq.mtk_hfg_support=0
 ro.vendor.pq.mtk_caltm_support=0
 ro.vendor.pq.mtk_clearzoom_support=0
-ro.vendor.pq.mtk_dc_support=0
-ro.vendor.pq.mtk_disp_c3d_support=1
-ro.vendor.pq.mtk_disp_ccorr_support=1
-ro.vendor.pq.mtk_disp_color_support=1
-ro.vendor.pq.mtk_disp_game_pq_support=1
-ro.vendor.pq.mtk_disp_gamma_support=1
-ro.vendor.pq.mtk_disp_tdshp_support=1
-ro.vendor.pq.mtk_dre30_support=1
-ro.vendor.pq.mtk_ds_support=1
-ro.vendor.pq.mtk_hdr10_plus_recording_support=1
-ro.vendor.pq.mtk_hfg_support=0
 ro.vendor.pq.mtk_mdp_ccorr_support=0
 ro.vendor.pq.mtk_pq_interface_support=1
-ro.vendor.pq.mtk_pq_video_whitelist_support=0
-ro.vendor.pq.mtk_scltm_support=1
+ro.vendor.pq.mtk_disp_c3d_support=1
+ro.vendor.pq.mtk_disp_tdshp_support=1
+ro.vendor.pq.mtk_disp_color_support=1
+ro.vendor.pq.mtk_disp_ccorr_support=1
+ro.vendor.pq.mtk_disp_gamma_support=1
+ro.vendor.pq.mtk_aal_support=0
+ro.vendor.pq.mtk_dre30_support=0
+ro.vendor.pq.mtk_disp_game_pq_support=1
+ro.vendor.pq.mtk_backlight_smooth_support=0
 ro.vendor.pq.mtk_ultra_dimming_support=0
-ro.vendor.pq.mtk_ultra_resolution_support=0
-ro.vendor.pq.mtk_video_transition=0
+ro.vendor.pq.mtk_blulight_def_support=0
+ro.vendor.mtk_dre30_support=0
+ro.vendor.mml.mtk_mml_support=1
+ro.vendor.mtk_aal_support=0
+ro.vendor.mtk_hdr_video_support=1
+ro.vendor.mtk_cuva_hdr_support=1
+debug.mediatek.disp_decompress=1
 ro.vendor.sdr2hdr.by.layer.support=true
-ro.vendor.smvr.p2batch.fhd=8
-ro.vendor.smvr.p2batch.hd=16
 ro.vendor.smvr.p2batch.vga=32
+ro.vendor.smvr.p2batch.hd=16
+ro.vendor.smvr.p2batch.fhd=8
+persist.vendor.sys.mtkaal.function=0
 
 # DRM
 ro.netflix.bsp_rev=MTK6895-35027-1
@@ -147,56 +133,54 @@ ro.vendor.fm.platform=connac2x
 
 # Fingerprint
 persist.vendor.fingerprint.type=side
-persist.vendor.fingerprint.sensor_location=1080|950|115|local:4627039422300187648
+persist.vendor.fingerprint.sensor_location=1080|960|200
 
 # GNSS
 ro.vendor.gps.chrdev=gps_drv_dl_v050
 ro.vendor.mtk_log_hide_gps=1
 
 # Graphics
+debug.graphics.game_default_frame_rate.disabled=true
 ro.opengles.version=196610
 persist.sys.phh.mtk_ged_kpi=1
 
 # IMS
 persist.vendor.anr.enhancement=0
-persist.vendor.ims_support=1
-persist.vendor.mtk.volte.enable=1
 persist.vendor.mtk_ct_volte_support=3
 persist.vendor.mtk_dynamic_ims_switch=1
 persist.vendor.mtk_wfc_support=1
-persist.vendor.vilte_support=1
+persist.vendor.mtk.volte.enable=1
 persist.vendor.viwifi_support=1
-persist.vendor.volte_support=1
-ro.telephony.iwlan_operation_mode=AP-assisted
 ro.vendor.md_auto_setup_ims=1
 ro.vendor.mtk_data_config=1
-ro.vendor.mtk_mobile_management=1
 
 # Media
 debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
 ro.vendor.hdr10plus.enable=1
 ro.vendor.jpeg_decode_sw_opt=2
-ro.vendor.mtk.c2.vdec.fmt.support.level=3
 ro.vendor.mtk_mvpu_security_support=0
 ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk_video_hevc_enc_support=1
+ro.vendor.mtk.c2.vdec.fmt.support.level=3
 vendor.mtk.vdec.waitkeyframeforplay=9
 
 # Neural Networks
 debug.mtk_tflite.target_nnapi=29
-ro.vendor.mtk_nn.option=A,B,C,D,E,F,G,Z
-ro.vendor.mtk_nn_baseline_support=1
-ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_support=1
+ro.vendor.mtk_nn_baseline_support=1
+ro.vendor.mtk_nn.option=A,B,C,D,E,F,G,Z
+ro.vendor.mtk_nn_quant_preferred=1
 
 # Power
-persist.vendor.powerhal.touchboost_duration=10
+vendor.powerhal.interaction.min=10
+vendor.powerhal.interaction.max=50
+vendor.powerhal.interaction.offset=0
 
 # Radio
+persist.vendor.md_c2k_cap_dep_check=0
 persist.radio.multisim.config=dsds
 persist.vendor.factory.GB2312=yes
-persist.vendor.md_c2k_cap_dep_check=0
 persist.vendor.mims_support=2
 persist.vendor.mtk_sim_switch_policy=2
 persist.vendor.radio.dynamic_sar=1
@@ -204,9 +188,9 @@ persist.vendor.radio.fd.counter=150
 persist.vendor.radio.fd.off.counter=50
 persist.vendor.radio.fd.off.r8.counter=50
 persist.vendor.radio.fd.r8.counter=150
-persist.vendor.radio.flashless.fsm=0
 persist.vendor.radio.flashless.fsm_cst=0
 persist.vendor.radio.flashless.fsm_rw=0
+persist.vendor.radio.flashless.fsm=0
 persist.vendor.radio.msimmode=dsds
 persist.vendor.radio.mtk_dsbp_support=3
 persist.vendor.radio.mtk_ps2_rat=N/L/W/G
@@ -222,12 +206,10 @@ ro.vendor.mtk_c2k_support=1
 ro.vendor.mtk_eccci_c2k=1
 ro.vendor.mtk_external_sim_only_slots=0
 ro.vendor.mtk_external_sim_support=1
-ro.vendor.mtk_fd_support=1
 ro.vendor.mtk_gwsd_capability=2
 ro.vendor.mtk_lte_support=1
 ro.vendor.mtk_mcf_support=1
 ro.vendor.mtk_md_world_mode_support=1
-ro.vendor.mtk_mipc_support=1
 ro.vendor.mtk_mobile_management=1
 ro.vendor.mtk_protocol1_rat_config=N/Lf/Lt/W/G
 ro.vendor.mtk_ps1_rat=N/Lf/Lt/W/G
@@ -243,6 +225,8 @@ ro.vendor.radio.max.multisim=dsds
 ro.vendor.sim_me_lock_mode=3
 telephony.active_modems.max_count=2
 telephony.lteOnCdmaDevice=1
+ro.vendor.mtk_mipc_support=1
+ro.vendor.mtk_fd_support=1
 import /vendor/etc/rsc/${ro.boot.rsc}.prop
 
 # Sensors
@@ -252,49 +236,41 @@ ro.vendor.mtk.sensor.support=yes
 ro.soc.manufacturer=Mediatek
 
 # SF
-debug.sf.auto_latch_unsignaled=false
-debug.sf.disable_client_composition_cache=1
-debug.sf.early.app.duration=20000000
-debug.sf.early.sf.duration=27600000
-debug.sf.earlyGl.app.duration=20000000
-debug.sf.earlyGl.sf.duration=27600000
+ro.surface_flinger.primary_display_orientation=ORIENTATION_0
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.set_touch_timer_ms=1100
+ro.surface_flinger.set_idle_timer_ms?=1100
+ro.surface_flinger.supports_background_blur=1
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.use_content_detection_for_refresh_rate?=true
+ro.surface_flinger.enable_frame_rate_override=false
+debug.sf.frame_rate_multiple_threshold=120
+debug.sf.auto_latch_unsignaled=0
+debug.sf.use_phase_offsets_as_durations=1
+debug.sf.late.sf.duration=13800000
+debug.sf.late.app.duration=10000000
+debug.sf.early.sf.duration=13800000
+debug.sf.early.app.duration=10000000
+debug.sf.earlyGl.sf.duration=13800000
+debug.sf.earlyGl.app.duration=13800000
+debug.sf.hwc.min.duration=8500000
 debug.sf.enable_gl_backpressure=0
+debug.sf.disable_client_composition_cache=1
 debug.sf.enable_hwc_vds=0
-debug.sf.enable_transaction_tracing=false
-debug.sf.frame_rate_multiple_threshold=60
-debug.sf.high_fps.early.app.duration=10000000
-debug.sf.high_fps.early.sf.duration=12300000
-debug.sf.high_fps.earlyGl.app.duration=10000000
-debug.sf.high_fps.earlyGl.sf.duration=12300000
-debug.sf.high_fps.hwc.min.duration=8500000
-debug.sf.high_fps.late.app.duration=10000000
-debug.sf.high_fps.late.sf.duration=12300000
-debug.sf.hwc.min.duration=23000000
-debug.sf.latch_unsignaled=true
-debug.sf.late.app.duration=20000000
-debug.sf.late.sf.duration=27600000
+debug.sf.enable_egl_image_tracker=0
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
-debug.sf.use_phase_offsets_as_durations=1
-ro.surface_flinger.enable_frame_rate_override=false
-ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
-ro.surface_flinger.has_HDR_display=true
-ro.surface_flinger.has_wide_color_display=true
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-ro.surface_flinger.primary_display_orientation=ORIENTATION_0
-ro.surface_flinger.protected_contents=true
-ro.surface_flinger.set_display_power_timer_ms=1000
-ro.surface_flinger.set_idle_timer_ms=1100
-ro.surface_flinger.set_touch_timer_ms=1100
-ro.surface_flinger.use_color_management=true
-ro.surface_flinger.use_content_detection_for_refresh_rate=true
-ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # Thermal
 ro.vendor.mtk_thermal_2_0=1
 
 # TEE
 ro.hardware.gatekeeper=mitee
+ro.hardware.wechat=mitee
+ro.hardware.kmsetkey=mitee
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_mitee_support=1
 ro.vendor.mtk_microtrust_tee_support=1
