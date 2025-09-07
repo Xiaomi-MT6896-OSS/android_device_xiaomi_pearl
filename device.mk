@@ -109,6 +109,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := true
+PRODUCT_FASTBOOT_TEMPLATE_ZIP := $(LOCAL_PATH)/prebuilts/fastboot.zip
+PRODUCT_FASTBOOT_IMAGES_PATH := images
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl.custom \
@@ -200,10 +206,6 @@ PRODUCT_PACKAGES += \
     LineageSettingsOverlayMT6895 \
     LineageDialerMT6895 \
     LineageSDKOverlayMT6895
-
-# Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION := true
 
 # Parts
 PRODUCT_PACKAGES += \
