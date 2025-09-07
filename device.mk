@@ -199,9 +199,6 @@ PRODUCT_PACKAGES += \
     WifiResOverlayMT6895
 
 PRODUCT_PACKAGES += \
-    LineageApertureOverlayPearl \
-    LineageDialerOverlayPearl \
-    LineageSDKOverlayPearl \
     LineageApertureOverlayMT6895 \
     LineageSettingsOverlayMT6895 \
     LineageDialerMT6895 \
