@@ -1,15 +1,6 @@
-mkp.ko
-bootprof.ko
 dbgtop-drm.ko
-irq-dbg.ko
-mrdump.ko
 mtk_sync.ko
 mtk_disp_notify.ko
-aee_aed.ko
-monitor_hang.ko
-aee_hangdet.ko
-mtk_printk_ctrl.ko
-log_store.ko
 nvmem_mtk-devinfo.ko
 mtk_wdt.ko
 sec-rng.ko
@@ -70,7 +61,6 @@ mtk_panel_ext.ko
 mediatek-drm-gateic.ko
 mediatek-drm-panel-drv.ko
 mediatek-drm.ko
-aee_rs.ko
 mmprofile.ko
 mtk-uart-apdma.ko
 8250_mtk.ko
@@ -93,12 +83,9 @@ panel-l16s-36-02-0a-dsc-vdo.ko
 phy-mtk-ufs.ko
 ufs-mediatek-mod.ko
 ufs-mediatek-dbg.ko
-mi-memory.ko
 mtk-dvfsrc-helper.ko
 mtk-dvfsrc-devfreq.ko
 clk-chk-mt6895.ko
-blocktag.ko
-pidmap.ko
 mtk-pmic-keys.ko
 mtk-kpd.ko
 regulator-vibrator.ko
@@ -241,6 +228,7 @@ mtk_panel_ext.ko
 mediatek-drm-gateic.ko
 mediatek-drm-panel-drv.ko
 mediatek-drm.ko
+ledtrig-backlight-drm.ko
 aee_rs.ko
 mmprofile.ko
 mtk-uart-apdma.ko

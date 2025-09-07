@@ -16,12 +16,6 @@ ccci_dpmaif.ko
 ccmni.ko
 mtk_u_ether.ko
 mtk_usb_f_rndis.ko
-c2k_usb.ko
-c2k_usb_f_via_atc.ko
-c2k_usb_f_via_ets.ko
-c2k_usb_f_via_gps.ko
-c2k_usb_f_via_modem.ko
-c2k_usb_f_via_pcv.ko
 asix.ko
 ax88179_178a.ko
 rps_perf.ko
@@ -78,7 +72,6 @@ mddp.ko
 mtk_cm_ipi.ko
 mtk_cm_mgr.ko
 mtk_cm_mgr_mt6895.ko
-atf_logger.ko
 apu_top.ko
 apusys.ko
 vcp.ko
@@ -95,7 +88,6 @@ gz_ipc_mod.ko
 gz_tz_system.ko
 trusted_mem.ko
 mtk_sec_heap.ko
-mtk_heap_debug.ko
 mtk-cqdma.ko
 mcupm.ko
 mtk_ccu.ko
@@ -392,7 +384,6 @@ mtk_irtx_pwm.ko
 widevine_driver.ko
 uload_ind.ko
 load_track.ko
-trace_mmstat.ko
 pmsr.ko
 xm_power_debug.ko
 spmtwam.ko
@@ -400,19 +391,7 @@ sec.ko
 spmtwam.ko
 emi-mpu-hook-v1.ko
 ax88179_178a.ko
-millet_binder.ko
-millet_core.ko
-millet_hs.ko
-millet_pkg.ko
-millet_sig.ko
-millet_oem_cgroup.ko
-binder_gki.ko
 asix.ko
-gpu_plaid.ko
-mi_log.ko
-miwill.ko
-miwill_mode_redudancy.ko
-minet.ko
 xiaomi_touch.ko
 nvt36672c.ko
 elliptic.ko
