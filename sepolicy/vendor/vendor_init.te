@@ -1,6 +1,5 @@
 set_prop(vendor_init, vendor_batterysecret_prop)
 set_prop(vendor_init, vendor_sensors_prop)
-set_prop(vendor_init, vendor_displayfeature_prop)
 rw_dir_file(vendor_init, sysfs_leds)
 
 set_prop(vendor_init, vendor_mtk_mitee_prop)
@@ -8,3 +7,5 @@ allow vendor_init mitee_sfs_file:dir create_dir_perms;
 allow vendor_init mitee_sfs_file:file create_file_perms;
 
 allow vendor_init vendor_default_prop:property_service set;
+
+set_prop(vendor_init, vendor_default_prop)

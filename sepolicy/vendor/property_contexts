@@ -5,6 +5,7 @@ persist.vendor.accelerate.charge u:object_r:vendor_batterysecret_prop:s0
 ro.boot.camera. u:object_r:vendor_mtk_camera_prop:s0
 persist.vendor.camera. u:object_r:vendor_mtk_camera_prop:s0
 vendor.debug.appcontrol.name u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera.sensor.m.fuseID u:object_r:vendor_mtk_camera_prop:s0
 
 # Fingerprint
 persist.vendor.fpc. u:object_r:vendor_fingerprint_prop:s0
@@ -14,6 +15,8 @@ ro.hardware.fp. u:object_r:vendor_fingerprint_prop:s0
 vendor.fps_hal. u:object_r:vendor_fingerprint_prop:s0
 
 # Mlipay
+odm.security.socid.provision.status u:object_r:vendor_mlipay_prop:s0
+persist.vendor.sys.attestation.status u:object_r:vendor_mlipay_prop:s0
 persist.vendor.sys.pay. u:object_r:vendor_mlipay_prop:s0
 persist.vendor.sys.provision.status u:object_r:vendor_mlipay_prop:s0
 persist.vendor.sys.rkp.status u:object_r:vendor_mlipay_prop:s0
@@ -28,5 +31,13 @@ ro.vendor.mtk_mitee_support u:object_r:vendor_mtk_mitee_prop:s0
 # Sensors
 ro.vendor.sensors.xiaomi. u:object_r:vendor_sensors_prop:s0
 
+# RIL
+ro.vendor.oem.sno u:object_r:vendor_default_prop:s0
+ro.vendor.oem.psno u:object_r:vendor_default_prop:s0
+ro.vendor.oem.imei u:object_r:vendor_default_prop:s0
+ro.vendor.oem.imei1 u:object_r:vendor_default_prop:s0
+ro.vendor.oem.imei2 u:object_r:vendor_default_prop:s0
+
 # Thermal
 vendor.sys.thermal.data.path u:object_r:vendor_thermal_prop:s0
+

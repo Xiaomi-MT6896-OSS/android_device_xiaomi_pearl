@@ -1,5 +1,5 @@
 type vendor_touchfeature_device, dev_type;
 
-allow mtk_hal_power vendor_touchfeature_device:chr_file rw_file_perms;
-allow mtk_hal_power sysfs_therm:file w_file_perms;
-r_dir_file(mtk_hal_power, thermal_core_data_file)
+allow hal_power_default vendor_touchfeature_device:chr_file rw_file_perms;
+allow hal_power_default sysfs_therm:file w_file_perms;
+r_dir_file(hal_power_default, thermal_core_data_file)
