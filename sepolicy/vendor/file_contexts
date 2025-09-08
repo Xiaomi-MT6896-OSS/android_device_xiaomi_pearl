@@ -126,28 +126,20 @@
 /vendor/lib(64)?/vendor\.mediatek\.hardware\.mtkpower@1\.[0-9]\.so u:object_r:same_process_hal_file:s0
 
 # Display
-/sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)? u:object_r:vendor_displayfeature_sysfs:s0
 /mnt/vendor/persist/display(/.*)? u:object_r:vendor_persist_display_file:s0
-
-# Displayfeature
 /data/vendor/display(/.*)? u:object_r:vendor_display_data_file:s0
-/(vendor|system\/vendor)/bin/displayfeature u:object_r:vendor_displayfeature_exec:s0
 
 # Ir
 /dev/ir_spi u:object_r:vendor_ir_spi_device:s0
 
-# Light
-/vendor/bin/hw/android\.hardware\.light-service\.xiaomi u:object_r:hal_light_default_exec:s0
-
 # Fingerprint
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/mfp-daemon u:object_r:hal_fingerprint_default_exec:s0
 /data/vendor/fpc(/.*)? u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/fpdump(/.*)? u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/gf_data(/.*)? u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/goodix(/.*)? u:object_r:fingerprint_vendor_data_file:s0
 /mnt/vendor/persist/fpc(/.*)? u:object_r:fingerprint_vendor_data_file:s0
-/dev/xiaomi-fp u:object_r:fingerprint_device:s0
+/mnt/vendor/persist/goodix(/.*)? u:object_r:fingerprint_vendor_data_file:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi u:object_r:hal_fingerprint_default_exec:s0
 
 # Graphics
 /dev/mi_display/disp_feature u:object_r:vendor_displayfeature_device:s0

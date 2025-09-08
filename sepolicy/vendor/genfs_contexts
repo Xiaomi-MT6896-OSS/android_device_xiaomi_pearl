@@ -14,6 +14,8 @@ genfscon sysfs /devices/platform/fingerprint/irq u:object_r:vendor_fingerprint_s
 genfscon sysfs /devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/clk_enable u:object_r:vendor_fingerprint_sysfs:s0
 genfscon sysfs /devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fingerdown_wait u:object_r:vendor_fingerprint_sysfs:s0
 genfscon sysfs /devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/irq u:object_r:vendor_fingerprint_sysfs:s0
+genfscon sysfs /devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param u:object_r:vendor_fingerprint_sysfs:s0
+genfscon sysfs /devices/virtual/touch/touch_dev/fod_press_status u:object_r:vendor_fingerprint_sysfs:s0
 
 # Power
 genfscon sysfs /devices/platform/11282000.i2c/i2c-12/12-0064/power_supply u:object_r:sysfs_power_supply:s0

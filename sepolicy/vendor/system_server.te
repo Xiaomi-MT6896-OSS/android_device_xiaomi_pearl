@@ -1,1 +1,0 @@
-allow system_server vendor_displayfeature_sysfs:file rw_file_perms;

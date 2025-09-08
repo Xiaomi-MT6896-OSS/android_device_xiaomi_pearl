@@ -6,16 +6,6 @@ ro.boot.camera. u:object_r:vendor_mtk_camera_prop:s0
 persist.vendor.camera. u:object_r:vendor_mtk_camera_prop:s0
 vendor.debug.appcontrol.name u:object_r:vendor_mtk_camera_prop:s0
 
-# Displayfeature
-persist.vendor.dc_backlight.enable u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.display.framework_thermal_dimming u:object_r:vendor_displayfeature_prop:s0
-vendor.displayfeature.entry.enable u:object_r:vendor_displayfeature_prop:s0
-vendor.display.panel.calibration.status u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.cabc.enable u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.histogram.enable u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.sre.enable u:object_r:vendor_displayfeature_prop:s0
-ro.vendor.xiaomi.bl.poll u:object_r:vendor_displayfeature_prop:s0
-
 # Fingerprint
 persist.vendor.fpc. u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.goodix. u:object_r:vendor_fingerprint_prop:s0
