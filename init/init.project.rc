@@ -86,6 +86,3 @@ on boot
     #camera flash led
     chown system system /sys/class/flashlight_core/flashlight/torchbrightness
     chmod 0664 /sys/class/flashlight_core/flashlight/torchbrightness
-    # game plaid mode
-    chown system system  /sys/devices/virtual/gpu_plaid/plaid/game_data
-    chmod 0664 /sys/devices/virtual/gpu_plaid/plaid/game_data
