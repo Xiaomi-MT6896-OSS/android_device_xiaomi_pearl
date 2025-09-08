@@ -17,8 +17,6 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.lineageos.settings"
-    android:versionCode="1"
-    android:versionName="1.0"
     android:sharedUserId="android.uid.system">
 
     <uses-permission android:name="android.permission.GET_TASKS" />
@@ -27,29 +25,41 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/device_settings_app_name"
+        android:allowBackup="true"
+        android:label="@string/app_name"
         android:persistent="true"
-        android:theme="@style/Theme.SubSettingsBase">
+        android:directBootAware="true"
+        android:defaultToDeviceProtectedStorage="true">
 
         <receiver
-            android:name=".BootCompletedReceiver"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <category android:name="android.intent.category.DEFAULT" />
+            android:name=".BootCompletedReceiverMain"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <service
-            android:name=".thermal.ThermalService"
-            android:exported="true"
-            android:permission="ThermalService" />
+        <receiver
+            android:name=".BootCompletedReceiverRefreshRate"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".gestures.GestureActionReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.lineageos.settings.ACTION_GESTURE_TRIGGER" />
+            </intent-filter>
+        </receiver>
 
         <activity
-            android:name=".thermal.ThermalActivity"
-            android:exported="false"
-            android:label="@string/thermal_title">
+            android:name=".thermal.ThermalSettingsActivity"
+            android:label="@string/thermal_title"
+            android:theme="@style/Theme.SubSettingsBase.Thermal"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -59,10 +69,58 @@
             <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/thermal_summary" />
-            <meta-data
-                android:name="com.android.settings.order"
-                android:value="1" />
         </activity>
+
+        <activity
+            android:name=".gestures.GestureSettingsActivity"
+            android:label="@string/gestures_title"
+            android:theme="@style/Theme.SubSettingsBase"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                       android:value="com.android.settings.category.ia.gestures" />
+            <meta-data android:name="com.android.settings.summary_uri"
+                       android:value="content://org.lineageos.settings.device.summary/gesture_settings" />
+        </activity>
+
+        <activity
+            android:name=".refreshrate.RefreshActivity"
+            android:label="@string/refresh_title"
+            android:exported="false"
+            android:theme="@style/Theme.SubSettingsBase_v31">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/refresh_summary" />
+        </activity>
+
+        <provider
+            android:name=".SummaryProvider"
+            android:authorities="org.lineageos.settings.device.summary">
+        </provider>
+
+        <service
+            android:name=".thermal.ThermalService"
+            android:permission="ThermalService">
+        </service>
+
+        <service
+            android:name=".gestures.BackTapService"
+            android:permission="BackTapService">
+        </service>
+
+        <service
+            android:name=".refreshrate.RefreshService"
+            android:exported="true"
+            android:permission="RefreshService">
+        </service>
 
     </application>
 
