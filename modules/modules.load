@@ -172,3 +172,4 @@ xiaomi_touch.ko
 nvt36672c.ko
 elliptic.ko
 double_click.ko
+us_prox_iio.ko
