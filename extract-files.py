@@ -132,6 +132,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc': blob_fixup()
         .regex_replace('start', 'enable'),
 
+    'vendor/etc/public.libraries.txt': blob_fixup()
+        .add_line_if_missing('libmpbase.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

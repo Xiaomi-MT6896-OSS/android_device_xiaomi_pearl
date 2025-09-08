@@ -905,6 +905,8 @@ vendor/lib64/libstagefrighthw.so
 # Media (C2)
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
+vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
+vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
@@ -1056,6 +1058,9 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 # Power
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
+
+# Public libraries
+vendor/etc/public.libraries.txt
 
 # Tida
 vendor/bin/tidad_mitee@1.2
