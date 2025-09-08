@@ -178,11 +178,12 @@ vendor/etc/misound_res_headphone.bin
 vendor/etc/misound_res_spk.bin
 
 # Audio Hardware
-vendor/lib64/libmisound.so
-vendor/lib64/libmisoundcrossfade.so
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6895.so
 vendor/lib64/hw/audio.r_submix.default.so
 vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6895.so
+vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so;FIX_SONAME
+vendor/lib64/libmisound.so
+vendor/lib64/libmisoundcrossfade.so
 
 # Audio Firmware
 vendor/firmware/tfa98xx.cnt

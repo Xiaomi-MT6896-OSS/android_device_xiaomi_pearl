@@ -112,7 +112,7 @@ blob_fixups: blob_fixups_user_type = {
 
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
-        .replace_needed('libalsautils.so', 'libalsautilsv2.so'),
+        .replace_needed('libalsautils.so', 'libalsautils-v31.so'),
 
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
