@@ -137,7 +137,7 @@ persist.vendor.fingerprint.type=side
 persist.vendor.fingerprint.sensor_location=1080|960|200|local:4627039422300187648
 
 # GNSS
-ro.vendor.gps.chrdev=gps_drv_dl_v050
+ro.vendor.gps.chrdev=gps_drv
 ro.vendor.mtk_log_hide_gps=1
 
 # Graphics
@@ -282,7 +282,7 @@ ro.apk_verity.mode=2
 # Wi-Fi
 ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wifi.sap.interface=ap0
-ro.vendor.wlan.chrdev=wmt_chrdev_wifi_connac2
+ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wlan.gen=gen4m_6895
 
 # Zygote
