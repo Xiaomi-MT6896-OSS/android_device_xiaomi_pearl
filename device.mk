@@ -65,12 +65,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.audio.service
 
 PRODUCT_PACKAGES += \
     audio.primary.default \
     audio.bluetooth.default \
-    audio.usb.default
+    audio.usb.default \
+    android.hardware.bluetooth.audio-impl
 
 PRODUCT_PACKAGES += \
     MtkInCallService
