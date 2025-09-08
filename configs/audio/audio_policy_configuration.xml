@@ -126,7 +126,7 @@
                 <mixPort name="hifi_input" role="sink"/>
             </mixPorts>
             <devicePorts>
-                <!-- Output devices declaration,  i.e. Sink DEVICE PORT -->
+                <!-- Output devices declaration  i.e. Sink DEVICE PORT -->
                 <devicePort tagName="Earpiece" type="AUDIO_DEVICE_OUT_EARPIECE" role="sink">
                    <profile name="" format="AUDIO_FORMAT_PCM_32_BIT"
                              samplingRates="44100 48000" channelMasks="AUDIO_CHANNEL_OUT_MONO"/>
