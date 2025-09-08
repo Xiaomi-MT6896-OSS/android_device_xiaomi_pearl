@@ -61,9 +61,9 @@ SPDX-License-Identifier: Apache-2.0
     <hal format="hidl" override="true">
         <name>android.hardware.secure_element</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::ISecureElement/eSE1</fqname>
         <fqname>@1.2::ISecureElement/SIM1</fqname>
         <fqname>@1.2::ISecureElement/SIM2</fqname>
+        <fqname>@1.2::ISecureElement/eSE1</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
