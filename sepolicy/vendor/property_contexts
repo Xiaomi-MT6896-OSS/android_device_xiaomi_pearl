@@ -5,7 +5,6 @@ persist.vendor.accelerate.charge u:object_r:vendor_batterysecret_prop:s0
 ro.boot.camera. u:object_r:vendor_mtk_camera_prop:s0
 persist.vendor.camera. u:object_r:vendor_mtk_camera_prop:s0
 vendor.debug.appcontrol.name u:object_r:vendor_mtk_camera_prop:s0
-vendor.camera.sensor.m.fuseID u:object_r:vendor_mtk_camera_prop:s0
 
 # Fingerprint
 persist.vendor.fpc. u:object_r:vendor_fingerprint_prop:s0
