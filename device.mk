@@ -200,7 +200,8 @@ PRODUCT_PACKAGES += \
     LineageApertureOverlayMT6895 \
     LineageSettingsOverlayMT6895 \
     LineageDialerMT6895 \
-    LineageSDKOverlayMT6895
+    LineageSDKOverlayMT6895 \
+    PowerOffAlarmOverlayMT6895
 
 # Parts
 PRODUCT_PACKAGES += \
