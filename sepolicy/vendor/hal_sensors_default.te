@@ -7,4 +7,6 @@ allow hal_sensors_default audio_socket:sock_file rw_file_perms;
 allow hal_sensors_default vendor_fingerprint_sysfs:file rw_file_perms;
 allow hal_sensors_default sensors_device:chr_file rw_file_perms;
 
+allow hal_sensors_default hal_audio_default:unix_stream_socket connectto;
+
 get_prop(hal_sensors_default, vendor_sensors_prop)
