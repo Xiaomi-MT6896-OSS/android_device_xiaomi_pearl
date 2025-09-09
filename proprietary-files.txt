@@ -483,8 +483,6 @@ vendor/lib64/mt6895/libmtkcam_ulog.so;SYMLINK=vendor/lib64/libmtkcam_ulog.so
 vendor/lib64/mt6895/libmtkcm_ipc_dummy.so;SYMLINK=vendor/lib64/libmtkcm_ipc_dummy.so
 vendor/lib64/mt6895/libpda_usdriver.so;SYMLINK=vendor/lib64/libpda_usdriver.so
 vendor/lib64/mt6895/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
-vendor/lib64/mt6895/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
-vendor/lib64/mt6895/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
 vendor/lib64/mt6895/libstereoinfoaccessor_vsdof.so;SYMLINK=vendor/lib64/libstereoinfoaccessor_vsdof.so
 vendor/lib64/mt6895/libvainr_model.so;SYMLINK=vendor/lib64/libvainr_model.so
 vendor/lib64/lib3a.ae.pipe.so
@@ -763,6 +761,8 @@ vendor/lib64/hw/mt6895/vulkan.mali.so;SYMLINK=vendor/lib64/hw/vulkan.mali.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
 vendor/lib64/mt6895/arm.graphics-V1-ndk_platform.so;SYMLINK=vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/mt6895/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
+vendor/lib64/mt6895/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
+vendor/lib64/mt6895/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
 vendor/lib64/mt6895/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
 vendor/lib64/mt6895/libpqpconfig.so;SYMLINK=vendor/lib64/libpqpconfig.so
 vendor/lib64/libDefaultFpsActor.so
