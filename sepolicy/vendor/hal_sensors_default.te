@@ -1,3 +1,5 @@
+type sysfs_tp_virtual_prox, sysfs_type, fs_type;
+
 hal_client_domain(hal_sensors_default, hal_audio)
 
 binder_call(hal_sensors_default, hal_audio_default)
@@ -8,5 +10,6 @@ allow hal_sensors_default vendor_fingerprint_sysfs:file rw_file_perms;
 allow hal_sensors_default sensors_device:chr_file rw_file_perms;
 
 allow hal_sensors_default hal_audio_default:unix_stream_socket connectto;
+allow hal_sensors_default sysfs_tp_virtual_prox:file rw_file_perms;
 
 get_prop(hal_sensors_default, vendor_sensors_prop)
