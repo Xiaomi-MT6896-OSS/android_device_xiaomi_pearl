@@ -116,7 +116,7 @@ ak7375c.ko
 dw9825a.ko
 bu64253gwz.ko
 pda_drv_mt6895.ko
-mtk_rpmsg_mbox.ko
+mtk_rpg_mbox.ko
 mtk-mbox.ko
 mtk_tinysys_ipi.ko
 fhctl.ko
@@ -162,6 +162,7 @@ mtk-pwm.ko
 mtk_irtx_pwm.ko
 widevine_driver.ko
 pmsr.ko
+xm_power_debug.ko
 spmtwam.ko
 sec.ko
 spmtwam.ko
