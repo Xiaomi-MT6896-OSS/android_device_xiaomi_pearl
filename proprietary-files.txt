@@ -820,7 +820,7 @@ vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-miteeservice.rc
 vendor/lib64/libmfido_mitee.so
 
 # Fingerprint
-vendor/lib64/hw/fingerprint.fpc.so
+vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.default.so;FIX_SONAME
 
 # FM Radio
 vendor/etc/init/init.fmradio_drv.rc
