@@ -1178,6 +1178,7 @@ vendor/etc/sensors/lightSensorCali.json
 vendor/etc/sensors/lightSensorConfig.json
 
 # Soter
+product/app/SoterService/SoterService.apk
 vendor/bin/soterd
 vendor/etc/init/vendor.xiaomi.hardware.soterservice@1.0-service.rc
 vendor/lib64/libsoter.so
