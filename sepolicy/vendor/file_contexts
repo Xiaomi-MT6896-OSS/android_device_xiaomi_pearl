@@ -167,6 +167,8 @@
 /vendor/bin/hw/vendor.xiaomi.hardware.secure_element@1.2-service u:object_r:hal_secure_element_default_exec:s0
 
 # Sensors
+/dev/elliptic0  u:object_r:sensors_device:s0
+/dev/elliptic1  u:object_r:sensors_device:s0
 /vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal u:object_r:hal_sensors_default_exec:s0
 /sys/devices/virtual/touch/touch_dev/ear_sensor u:object_r:sysfs_tp_virtual_prox:s0
 /sys/devices/virtual/touch/touch_dev/palm_sensor u:object_r:sysfs_tp_virtual_prox:s0
