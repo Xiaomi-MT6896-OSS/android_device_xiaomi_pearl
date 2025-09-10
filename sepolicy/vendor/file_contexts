@@ -168,6 +168,10 @@
 
 # Sensors
 /vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal u:object_r:hal_sensors_default_exec:s0
+/sys/devices/virtual/touch/touch_dev/ear_sensor u:object_r:sysfs_tp_virtual_prox:s0
+/sys/devices/virtual/touch/touch_dev/palm_sensor u:object_r:sysfs_tp_virtual_prox:s0
+/sys/devices/virtual/touch/touch_dev/hold_sensor u:object_r:sysfs_tp_virtual_prox:s0
+/sys/devices/virtual/touch/touch_dev/ear_sensor_data u:object_r:sysfs_tp_virtual_prox:s0
 
 # Soter
 /vendor/bin/soterd u:object_r:hal_soterservice_default_exec:s0
