@@ -31,13 +31,13 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
    	'vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee': blob_fixup()
-		.replace_needed('android.hardware.security.keymint-V1-ndk_platform.so','android.hardware.security.keymint-V4-ndk.so')
+		.replace_needed('android.hardware.security.keymint-V1-ndk_platform.so','android.hardware.security.keymint-V3-ndk-v34.so')
 		.replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so', 'android.hardware.security.sharedsecret-V1-ndk.so')
 		.replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so', 'android.hardware.security.secureclock-V1-ndk.so')
 		.add_needed('android.hardware.security.rkp-V3-ndk.so'),
 
 	'vendor/lib64/libmt_mitee@1.3.so': blob_fixup()
-    .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so','android.hardware.security.keymint-V4-ndk.so'),
+    .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so','android.hardware.security.keymint-V3-ndk-v34.so'),
 
 	('vendor/bin/hw/android.hardware.gnss-service.mediatek',
 	'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'): blob_fixup()
