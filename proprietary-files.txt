@@ -1234,13 +1234,22 @@ vendor/etc/thermald-devices.conf
 
 # Touchscreen Firmware (novatek)
 vendor/firmware/novatek_nt36672e_l16s_fw01.bin
+vendor/firmware/novatek_nt36672e_l16s_fw01.bin:vendor_ramdisk/firmware/novatek_nt36672e_l16s_fw01.bin
 vendor/firmware/novatek_nt36672e_l16s_fw02.bin
+vendor/firmware/novatek_nt36672e_l16s_fw02.bin:vendor_ramdisk/firmware/novatek_nt36672e_l16s_fw02.bin
 vendor/firmware/novatek_nt36672e_l16s_mp01.bin
+vendor/firmware/novatek_nt36672e_l16s_mp01.bin:vendor_ramdisk/firmware/novatek_nt36672e_l16s_mp01.bin
 vendor/firmware/novatek_nt36672e_l16s_mp02.bin
+vendor/firmware/novatek_nt36672e_l16s_mp02.bin:vendor_ramdisk/firmware/novatek_nt36672e_l16s_mp02.bin
 vendor/firmware/novatek_ts_fw01.bin
+vendor/firmware/novatek_ts_fw01.bin:vendor_ramdisk/firmware/novatek_ts_fw01.bin
 vendor/firmware/novatek_ts_fw02.bin
+vendor/firmware/novatek_ts_fw02.bin:vendor_ramdisk/firmware/novatek_ts_fw02.bin
 vendor/firmware/novatek_ts_mp01.bin
+vendor/firmware/novatek_ts_mp01.bin:vendor_ramdisk/firmware/novatek_ts_mp01.bin
 vendor/firmware/novatek_ts_mp02.bin
+vendor/firmware/novatek_ts_mp02.bin:vendor_ramdisk/firmware/novatek_ts_mp02.bin
+
 
 # Trusted Execution Environment (TEE)
 vendor/bin/mitee_info
