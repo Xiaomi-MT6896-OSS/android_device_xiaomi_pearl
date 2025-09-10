@@ -179,7 +179,6 @@ vendor/etc/misound_res_spk.bin
 
 # Audio Hardware
 vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6895.so
-vendor/lib64/hw/audio.r_submix.default.so
 vendor/lib64/hw/audio.r_submix.mediatek.so;SYMLINK=vendor/lib64/hw/audio.r_submix.mt6895.so
 vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so;FIX_SONAME
 vendor/lib64/libmisound.so
@@ -895,7 +894,7 @@ vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.mitee.xm
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.mitee.xml
 
 # Keymint V3 NDK (from duchamp 15 AP3A.240905.015.A2 OS2.0.2.0)
-vendor/lib64/android.hardware.security.keymint-V3-ndk.so:android.hardware.security.keymint-V3-ndk-v34.so|5b9fdbe3e6871779512d6c0a5071499774896fd7
+vendor/lib64/android.hardware.security.keymint-V3-ndk.so:vendor/lib64/android.hardware.security.keymint-V3-ndk-v34.so|5b9fdbe3e6871779512d6c0a5071499774896fd7
 
 # Media
 vendor/lib64/libMtkOmxCore.so
@@ -1022,7 +1021,7 @@ vendor/lib64/libsn100u_fw.so
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp-pnscr.conf
 vendor/etc/libnfc-nxp.conf
-vendor/etc/libnfc-nxp_RF.conf
+vendor/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
 vendor/etc/sn100u_bootup.pnscr
 vendor/etc/sn100u_ese_disableIso.pnscr
 vendor/etc/sn100u_ese_disableIsoRead.pnscr
@@ -1183,10 +1182,6 @@ vendor/bin/soterd
 vendor/etc/init/vendor.xiaomi.hardware.soterservice@1.0-service.rc
 vendor/lib64/libsoter.so
 vendor/lib64/vendor.xiaomi.hardware.soterservice@1.0.so
-
-# Soundtrigger
-vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
-vendor/lib64/hw/sound_trigger.primary.default.so
 
 # Tether Offload
 vendor/bin/hw/tetheroffloadservice
