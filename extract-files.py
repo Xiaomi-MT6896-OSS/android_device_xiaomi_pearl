@@ -109,7 +109,8 @@ blob_fixups: blob_fixups_user_type = {
 
     'vendor/etc/sensors/hals.conf': blob_fixup()
         .regex_replace('android.hardware.sensors@2.X-subhal-mediatek.so', 'android.hardware.sensors@2.0-subhal-impl-1.0.so')
-        .regex_replace('sensors.touch.detect.so', 'sensors.dynamic_sensor_hal.so'),
+        .regex_replace('sensors.touch.detect.so', 'sensors.dynamic_sensor_hal.so')
+        .add_line_if_missing('sensors.elliptic@2.0.so'),
 
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
