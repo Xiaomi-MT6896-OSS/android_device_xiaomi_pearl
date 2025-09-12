@@ -2,7 +2,7 @@
   "Nodes": [
     {
       "Name": "MemFreq",
-      "Path": "/sys/devices/platform/soc/1c00f000.dvfsrc/mtk-dvfsrc-devfreq/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq",
+      "Path": "/sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq",
       "Values": [
         "9999999999",
         "6400000000",
