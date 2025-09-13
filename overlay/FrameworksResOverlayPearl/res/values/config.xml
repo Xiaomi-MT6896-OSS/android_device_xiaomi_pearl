@@ -381,4 +381,7 @@
          rates are available from hardware composer. Only has an effect if the value is
          non-zero. -->
     <integer name="config_defaultPeakRefreshRate">144</integer>
+
+    <!-- Total physical SIM slots (pSIM + eSIM), may differ from number of logical modems. -->
+    <integer name="config_num_physical_slots">2</integer>
 </resources>
