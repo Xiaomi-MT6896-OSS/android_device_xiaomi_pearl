@@ -28,6 +28,11 @@ vendor.teefs_state u:object_r:vendor_mtk_mitee_prop:s0
 ro.boot.tee_type u:object_r:vendor_mtk_mitee_prop:s0
 ro.vendor.mtk_mitee_support u:object_r:vendor_mtk_mitee_prop:s0
 
+# RIL
+ro.vendor.oem.sno          u:object_r:vendor_mtk_radio_prop:s0
+ro.vendor.oem.psno         u:object_r:vendor_mtk_radio_prop:s0
+ro.vendor.oem.ctacode      u:object_r:vendor_mtk_radio_prop:s0
+
 # Sensors
 ro.vendor.sensors.xiaomi. u:object_r:vendor_sensors_prop:s0
 
