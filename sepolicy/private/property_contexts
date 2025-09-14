@@ -1,0 +1,11 @@
+# Camera
+persist.camera.                         u:object_r:exported_system_prop:s0
+demo.hole                               u:object_r:exported_system_prop:s0
+demo.near                               u:object_r:exported_system_prop:s0
+demo.far                                u:object_r:exported_system_prop:s0
+demo.fb                                 u:object_r:exported_system_prop:s0
+persist.vendor.algoengine.disablemask   u:object_r:exported_system_prop:s0
+vendor.tag.nfe.rethrow                  u:object_r:vendor_mtk_camera_prop:s0
+
+# LOG
+ro.logsystem.usertype                   u:object_r:build_prop:s0
